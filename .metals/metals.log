@@ -1,0 +1,2587 @@
+2024.09.13 21:27:09 WARN  Error requesting workspace reset
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+
+2024.09.13 21:27:09 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+
+2024.09.13 21:27:15 INFO  Started: Metals version 1.3.5 in folders '/home/focused_xy/cs/ysyx/npc, /home/focused_xy/cs/ysyx/ysyxSoC' for client Visual Studio Code 1.93.1.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@3ec271a5]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@3b4e07dd]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@3ec271a5]
+2024.09.13 21:27:15 INFO  Flyway Community Edition 9.22.3 by Redgate
+2024.09.13 21:27:15 INFO  See release notes here: https://rd.gt/416ObMi
+2024.09.13 21:27:15 INFO  
+2024.09.13 21:27:15 INFO  Database: jdbc:h2:file:/home/focused_xy/cs/ysyx/ysyxSoC/.metals/metals (H2 2.3)
+2024.09.13 21:27:15 WARN  Flyway upgrade recommended: H2 2.3.230 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.09.13 21:27:15 INFO  Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2024.09.13 21:27:15 INFO  Successfully validated 6 migrations (execution time 00:00.010s)
+2024.09.13 21:27:15 INFO  Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2024.09.13 21:27:15 INFO  Current version of schema "PUBLIC": << Empty Schema >>
+2024.09.13 21:27:15 INFO  Migrating schema "PUBLIC" to version "1 - Create tables"
+2024.09.13 21:27:15 INFO  Migrating schema "PUBLIC" to version "2 - Server discovery"
+2024.09.13 21:27:15 INFO  Migrating schema "PUBLIC" to version "3 - Jar symbols"
+2024.09.13 21:27:15 INFO  Migrating schema "PUBLIC" to version "4 - Fingerprints"
+2024.09.13 21:27:15 INFO  Migrating schema "PUBLIC" to version "5 - Jar type hierarchy"
+2024.09.13 21:27:15 INFO  Migrating schema "PUBLIC" to version "6 - Delete indices"
+2024.09.13 21:27:15 INFO  Successfully applied 6 migrations to schema "PUBLIC", now at version v6 (execution time 00:00.024s)
+2024.09.13 21:27:16 INFO  no build target found for /home/focused_xy/cs/ysyx/ysyxSoC/build.sc. Using presentation compiler with project's scala-library version: 3.3.3
+2024.09.13 21:27:16 INFO  Attempting to connect to the build server...
+2024.09.13 21:27:16 INFO  Database: jdbc:h2:file:/home/focused_xy/cs/ysyx/npc/.metals/metals (H2 2.3)
+2024.09.13 21:27:16 WARN  Flyway upgrade recommended: H2 2.3.230 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.09.13 21:27:16 INFO  Successfully validated 6 migrations (execution time 00:00.007s)
+2024.09.13 21:27:16 INFO  Current version of schema "PUBLIC": 6
+2024.09.13 21:27:16 INFO  Schema "PUBLIC" is up to date. No migration necessary.
+2024.09.13 21:27:16 INFO  Attempting to connect to the build server...
+2024.09.13 21:27:16 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/focused_xy/cs/ysyx/npc/.metals/bsp.trace.json or /home/focused_xy/.cache/metals/bsp.trace.json
+2024.09.13 21:27:16 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/focused_xy/cs/ysyx/ysyxSoC/.metals/bsp.trace.json or /home/focused_xy/.cache/metals/bsp.trace.json
+2024.09.13 21:27:16 INFO  time: Connected to build server in 0.37s
+2024.09.13 21:27:16 INFO  time: Connected to build server in 0.14s
+2024.09.13 21:27:16 INFO  Connected to Build server: Bloop v1.6.0
+2024.09.13 21:27:16 INFO  Connected to Build server: Bloop v1.6.0
+2024.09.13 21:27:16 INFO  time: Imported build in 0.14s
+2024.09.13 21:27:16 INFO  running doctor check
+2024.09.13 21:27:16 INFO  java targets: NPC, NPC.test, mill-build-
+2024.09.13 21:27:17 INFO  running doctor check
+2024.09.13 21:27:17 INFO  java targets: rocketchip.hardfloat, ysyxsoc, rocketchip, rocketchip.cde, rocketchip.macros, mill-build-
+2024.09.13 21:27:17 WARN  2.13.10 is no longer supported in the current Metals versions, using the last known supported version 1.3.3
+DanglingParentheses: top-level presets deprecated; use 'preset' subsection
+2024.09.13 21:27:19 INFO  Database: jdbc:h2:file:/home/focused_xy/.metals/metals (H2 2.3)
+2024.09.13 21:27:19 WARN  Flyway upgrade recommended: H2 2.3.230 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.09.13 21:27:19 INFO  Successfully validated 1 migration (execution time 00:00.003s)
+2024.09.13 21:27:19 INFO  Current version of schema "PUBLIC": 1
+2024.09.13 21:27:19 INFO  Schema "PUBLIC" is up to date. No migration necessary.
+2024.09.13 21:27:20 INFO  Database: jdbc:h2:file:/home/focused_xy/.metals/metals (H2 2.3)
+2024.09.13 21:27:20 WARN  Flyway upgrade recommended: H2 2.3.230 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.09.13 21:27:20 INFO  Successfully validated 1 migration (execution time 00:00.001s)
+2024.09.13 21:27:20 INFO  Current version of schema "PUBLIC": 1
+2024.09.13 21:27:20 INFO  Schema "PUBLIC" is up to date. No migration necessary.
+2024.09.13 21:27:20 INFO  time: indexed workspace in 3.94s
+2024.09.13 21:27:20 WARN  no build target for: /home/focused_xy/cs/ysyx/ysyxSoC/build.sc
+2024.09.13 21:27:23 INFO  time: indexed workspace in 5.86s
+2024.09.13 21:28:19 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:28:19 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:28:19 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:28:19 INFO  time: compiled rocketchip.macros in 0.12s
+2024.09.13 21:28:19 INFO  time: compiled rocketchip.hardfloat in 0.12s
+2024.09.13 21:28:19 INFO  time: compiled rocketchip.cde in 0.12s
+2024.09.13 21:28:25 INFO  compiling npc (22 scala sources)
+2024.09.13 21:28:34 INFO  time: compiled NPC in 8.93s
+2024.09.13 21:28:38 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:28:38 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:28:38 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:28:38 INFO  time: compiled rocketchip.cde in 0.29s
+2024.09.13 21:28:38 INFO  time: compiled rocketchip.hardfloat in 0.42s
+2024.09.13 21:28:38 INFO  time: compiled rocketchip.macros in 0.54s
+9月 13, 2024 9:28:49 下午 scala.meta.internal.pc.MetalsGlobal inverseSemanticdbSymbols
+严重: invalid SemanticDB symbol: ysyx/APBSPI#Impl#noResp.
+-1 is out of bounds (min 0, max 2)
+9月 13, 2024 9:28:49 下午 scala.meta.internal.pc.CompilerAccess handleError
+严重: A severe compiler error occurred, full details of the error can be found in the error report /home/focused_xy/cs/ysyx/ysyxSoC/.metals/.reports/metals-full/2024-09-13/r_compiler-error_(ysyxsoc)_21-28-49-990.md
+9月 13, 2024 9:29:30 下午 scala.meta.internal.pc.CompilerAccess handleError
+严重: A severe compiler error occurred, full details of the error can be found in the error report /home/focused_xy/cs/ysyx/ysyxSoC/.metals/.reports/metals-full/2024-09-13/r_compiler-error_(ysyxsoc)_21-29-30-728.md
+2024.09.13 21:29:30 WARN  Could not find semantic tokens for: file:///home/focused_xy/cs/ysyx/ysyxSoC/src/device/SPI.scala
+9月 13, 2024 9:29:30 下午 scala.meta.internal.pc.CompilerAccess handleError
+严重: -1 is out of bounds (min 0, max 2)
+java.lang.IndexOutOfBoundsException: -1 is out of bounds (min 0, max 2)
+	at scala.collection.mutable.ArrayBuffer.apply(ArrayBuffer.scala:106)
+	at scala.reflect.internal.Types$Type.findMemberInternal$1(Types.scala:1030)
+	at scala.reflect.internal.Types$Type.findMember(Types.scala:1035)
+	at scala.reflect.internal.Types$Type.memberBasedOnName(Types.scala:661)
+	at scala.reflect.internal.Types$Type.nonLocalMember(Types.scala:652)
+	at scala.tools.nsc.typechecker.Contexts$ImportInfo.importedSelectedSymbol(Contexts.scala:1865)
+	at scala.tools.nsc.typechecker.Contexts$SymbolLookup.apply(Contexts.scala:1492)
+	at scala.tools.nsc.typechecker.Contexts$Context.lookupSymbol(Contexts.scala:1298)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedIdent$2(Typers.scala:5476)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedIdentOrWildcard$1(Typers.scala:5528)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5989)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6047)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typed1$41(Typers.scala:5078)
+	at scala.tools.nsc.typechecker.Typers$Typer.silent(Typers.scala:698)
+	at scala.tools.nsc.typechecker.Typers$Typer.normalTypedApply$1(Typers.scala:5080)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedApply$1(Typers.scala:5110)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5991)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6047)
+	at scala.tools.nsc.typechecker.Typers$Typer.computeType(Typers.scala:6136)
+	at scala.tools.nsc.typechecker.Namers$Namer.assignTypeToTree(Namers.scala:1127)
+	at scala.tools.nsc.typechecker.Namers$Namer.valDefSig(Namers.scala:1743)
+	at scala.tools.nsc.typechecker.Namers$Namer.memberSig(Namers.scala:1928)
+	at scala.tools.nsc.typechecker.Namers$Namer.typeSig(Namers.scala:1878)
+	at scala.tools.nsc.typechecker.Namers$Namer$ValTypeCompleter.completeImpl(Namers.scala:944)
+	at scala.tools.nsc.typechecker.Namers$Namer$AccessorTypeCompleter.completeImpl(Namers.scala:968)
+	at scala.tools.nsc.typechecker.Namers$LockingTypeCompleter.complete(Namers.scala:2075)
+	at scala.tools.nsc.typechecker.Namers$LockingTypeCompleter.complete$(Namers.scala:2073)
+	at scala.tools.nsc.typechecker.Namers$TypeCompleterBase.complete(Namers.scala:2068)
+	at scala.reflect.internal.Symbols$Symbol.completeInfo(Symbols.scala:1563)
+	at scala.reflect.internal.Symbols$Symbol.info(Symbols.scala:1535)
+	at scala.reflect.internal.Symbols$Symbol.cookJavaRawInfo(Symbols.scala:1751)
+	at scala.tools.nsc.typechecker.Infer$Inferencer.checkAccessible(Infer.scala:302)
+	at scala.tools.nsc.typechecker.Typers$Typer.makeAccessible(Typers.scala:577)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedIdent$2(Typers.scala:5505)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedIdentOrWildcard$1(Typers.scala:5528)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5989)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6047)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedSelectOrSuperCall$1(Typers.scala:6145)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5992)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6047)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedSelectOrSuperCall$1(Typers.scala:6145)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5992)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6047)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedSelectOrSuperCall$1(Typers.scala:6145)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5992)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6047)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedSelectOrSuperCall$1(Typers.scala:6145)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5992)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6047)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typed1$41(Typers.scala:5078)
+	at scala.tools.nsc.typechecker.Typers$Typer.silent(Typers.scala:698)
+	at scala.tools.nsc.typechecker.Typers$Typer.normalTypedApply$1(Typers.scala:5080)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedApply$1(Typers.scala:5110)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5991)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6047)
+	at scala.tools.nsc.typechecker.Typers$Typer.computeType(Typers.scala:6136)
+	at scala.tools.nsc.typechecker.Namers$Namer.assignTypeToTree(Namers.scala:1127)
+	at scala.tools.nsc.typechecker.Namers$Namer.valDefSig(Namers.scala:1743)
+	at scala.tools.nsc.typechecker.Namers$Namer.memberSig(Namers.scala:1928)
+	at scala.tools.nsc.typechecker.Namers$Namer.typeSig(Namers.scala:1878)
+	at scala.tools.nsc.typechecker.Namers$Namer$ValTypeCompleter.completeImpl(Namers.scala:944)
+	at scala.tools.nsc.typechecker.Namers$Namer$AccessorTypeCompleter.completeImpl(Namers.scala:968)
+	at scala.tools.nsc.typechecker.Namers$LockingTypeCompleter.complete(Namers.scala:2075)
+	at scala.tools.nsc.typechecker.Namers$LockingTypeCompleter.complete$(Namers.scala:2073)
+	at scala.tools.nsc.typechecker.Namers$TypeCompleterBase.complete(Namers.scala:2068)
+	at scala.reflect.internal.Symbols$Symbol.completeInfo(Symbols.scala:1563)
+	at scala.reflect.internal.Symbols$Symbol.info(Symbols.scala:1535)
+	at scala.meta.internal.pc.CompletionItemResolver.fullDocstring(CompletionItemResolver.scala:66)
+	at scala.meta.internal.pc.CompletionItemResolver.$anonfun$handleSymbol$2(CompletionItemResolver.scala:39)
+	at scala.meta.internal.pc.ItemResolver.enrichDocs(ItemResolver.scala:75)
+	at scala.meta.internal.pc.ItemResolver.enrichDocs$(ItemResolver.scala:14)
+	at scala.meta.internal.pc.CompletionItemResolver.enrichDocs(CompletionItemResolver.scala:8)
+	at scala.meta.internal.pc.CompletionItemResolver.handleSymbol(CompletionItemResolver.scala:40)
+	at scala.meta.internal.pc.CompletionItemResolver.resolve(CompletionItemResolver.scala:24)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$completionItemResolve$1(ScalaPresentationCompiler.scala:320)
+
+9月 13, 2024 9:29:48 下午 scala.meta.internal.pc.CompilerAccess handleError
+严重: A severe compiler error occurred, full details of the error can be found in the error report /home/focused_xy/cs/ysyx/ysyxSoC/.metals/.reports/metals-full/2024-09-13/r_compiler-error_(ysyxsoc)_21-29-48-036.md
+2024.09.13 21:29:55 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:29:55 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:29:55 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:29:55 INFO  time: compiled rocketchip.cde in 27ms
+2024.09.13 21:29:55 INFO  time: compiled rocketchip.hardfloat in 43ms
+2024.09.13 21:29:55 INFO  time: compiled rocketchip.macros in 67ms
+9月 13, 2024 9:30:04 下午 scala.meta.internal.pc.CompilerAccess handleError
+严重: -1 is out of bounds (min 0, max 2)
+java.lang.IndexOutOfBoundsException: -1 is out of bounds (min 0, max 2)
+	at scala.collection.mutable.ArrayBuffer.apply(ArrayBuffer.scala:106)
+	at scala.reflect.internal.Types$Type.findMemberInternal$1(Types.scala:1030)
+	at scala.reflect.internal.Types$Type.findMember(Types.scala:1035)
+	at scala.reflect.internal.Types$Type.memberBasedOnName(Types.scala:661)
+	at scala.reflect.internal.Types$Type.member(Types.scala:625)
+	at scala.tools.nsc.typechecker.Contexts$SymbolLookup.apply(Contexts.scala:1416)
+	at scala.tools.nsc.typechecker.Contexts$Context.lookupSymbol(Contexts.scala:1298)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedIdent$2(Typers.scala:5476)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedIdentOrWildcard$1(Typers.scala:5528)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5989)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6047)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typed1$41(Typers.scala:5078)
+	at scala.tools.nsc.typechecker.Typers$Typer.silent(Typers.scala:698)
+	at scala.tools.nsc.typechecker.Typers$Typer.normalTypedApply$1(Typers.scala:5080)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedApply$1(Typers.scala:5110)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5991)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6047)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedArg(Typers.scala:3421)
+	at scala.tools.nsc.typechecker.PatternTypers$PatternTyper.typedArgWithFormal$1(PatternTypers.scala:136)
+	at scala.tools.nsc.typechecker.PatternTypers$PatternTyper.$anonfun$typedArgsForFormals$4(PatternTypers.scala:150)
+	at scala.tools.nsc.typechecker.PatternTypers$PatternTyper.typedArgsForFormals(PatternTypers.scala:150)
+	at scala.tools.nsc.typechecker.PatternTypers$PatternTyper.typedArgsForFormals$(PatternTypers.scala:131)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedArgsForFormals(Typers.scala:203)
+	at scala.tools.nsc.typechecker.Typers$Typer.handleMonomorphicCall$1(Typers.scala:3753)
+	at scala.tools.nsc.typechecker.Typers$Typer.doTypedApply(Typers.scala:3804)
+	at scala.tools.nsc.typechecker.Typers$Typer.normalTypedApply$1(Typers.scala:5101)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedApply$1(Typers.scala:5110)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5991)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6047)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typed1$32(Typers.scala:5030)
+	at scala.tools.nsc.typechecker.Typers$Typer.reportError$1(Typers.scala:5030)
+	at scala.tools.nsc.typechecker.Typers$Typer.onError$3(Typers.scala:5075)
+	at scala.tools.nsc.typechecker.Typers$Typer.normalTypedApply$1(Typers.scala:5102)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedApply$1(Typers.scala:5110)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5991)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6047)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedPattern$2(Typers.scala:6226)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedPattern$1(Typers.scala:6226)
+	at scala.tools.nsc.typechecker.TypeDiagnostics.typingInPattern(TypeDiagnostics.scala:71)
+	at scala.tools.nsc.typechecker.TypeDiagnostics.typingInPattern$(TypeDiagnostics.scala:68)
+	at scala.meta.internal.pc.MetalsGlobal$MetalsInteractiveAnalyzer.typingInPattern(MetalsGlobal.scala:76)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedPattern(Typers.scala:6226)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedCase(Typers.scala:2583)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedCases$1(Typers.scala:2617)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedCases(Typers.scala:2616)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedMatch(Typers.scala:2628)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedVirtualizedMatch$1(Typers.scala:4779)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedOutsidePatternMode$1(Typers.scala:5970)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:6001)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6047)
+	at scala.tools.nsc.typechecker.Typers$Typer.computeType(Typers.scala:6136)
+	at scala.tools.nsc.typechecker.Namers$Namer.assignTypeToTree(Namers.scala:1127)
+	at scala.tools.nsc.typechecker.Namers$Namer.valDefSig(Namers.scala:1743)
+	at scala.tools.nsc.typechecker.Namers$Namer.memberSig(Namers.scala:1928)
+	at scala.tools.nsc.typechecker.Namers$Namer.typeSig(Namers.scala:1878)
+	at scala.tools.nsc.typechecker.Namers$Namer$MonoTypeCompleter.completeImpl(Namers.scala:874)
+	at scala.tools.nsc.typechecker.Namers$LockingTypeCompleter.complete(Namers.scala:2075)
+	at scala.tools.nsc.typechecker.Namers$LockingTypeCompleter.complete$(Namers.scala:2073)
+	at scala.tools.nsc.typechecker.Namers$TypeCompleterBase.complete(Namers.scala:2068)
+	at scala.reflect.internal.Symbols$Symbol.completeInfo(Symbols.scala:1563)
+	at scala.reflect.internal.Symbols$Symbol.info(Symbols.scala:1535)
+	at scala.reflect.internal.Symbols$Symbol.cookJavaRawInfo(Symbols.scala:1751)
+	at scala.tools.nsc.typechecker.Infer$Inferencer.checkAccessible(Infer.scala:302)
+	at scala.tools.nsc.typechecker.Typers$Typer.makeAccessible(Typers.scala:577)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedIdent$2(Typers.scala:5505)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedIdentOrWildcard$1(Typers.scala:5528)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5989)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6047)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedSelectOrSuperCall$1(Typers.scala:6145)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5992)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6047)
+	at scala.tools.nsc.typechecker.Typers$Typer.computeType(Typers.scala:6136)
+	at scala.tools.nsc.typechecker.Namers$Namer.assignTypeToTree(Namers.scala:1127)
+	at scala.tools.nsc.typechecker.Namers$Namer.valDefSig(Namers.scala:1743)
+	at scala.tools.nsc.typechecker.Namers$Namer.memberSig(Namers.scala:1928)
+	at scala.tools.nsc.typechecker.Namers$Namer.typeSig(Namers.scala:1878)
+	at scala.tools.nsc.typechecker.Namers$Namer$ValTypeCompleter.completeImpl(Namers.scala:944)
+	at scala.tools.nsc.typechecker.Namers$Namer$AccessorTypeCompleter.completeImpl(Namers.scala:968)
+	at scala.tools.nsc.typechecker.Namers$LockingTypeCompleter.complete(Namers.scala:2075)
+	at scala.tools.nsc.typechecker.Namers$LockingTypeCompleter.complete$(Namers.scala:2073)
+	at scala.tools.nsc.typechecker.Namers$TypeCompleterBase.complete(Namers.scala:2068)
+	at scala.reflect.internal.Symbols$Symbol.completeInfo(Symbols.scala:1563)
+	at scala.reflect.internal.Symbols$Symbol.info(Symbols.scala:1535)
+	at scala.meta.internal.pc.CompletionItemResolver.fullDocstring(CompletionItemResolver.scala:66)
+	at scala.meta.internal.pc.CompletionItemResolver.$anonfun$handleSymbol$2(CompletionItemResolver.scala:39)
+	at scala.meta.internal.pc.ItemResolver.enrichDocs(ItemResolver.scala:75)
+	at scala.meta.internal.pc.ItemResolver.enrichDocs$(ItemResolver.scala:14)
+	at scala.meta.internal.pc.CompletionItemResolver.enrichDocs(CompletionItemResolver.scala:8)
+	at scala.meta.internal.pc.CompletionItemResolver.handleSymbol(CompletionItemResolver.scala:40)
+	at scala.meta.internal.pc.CompletionItemResolver.resolve(CompletionItemResolver.scala:24)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$completionItemResolve$1(ScalaPresentationCompiler.scala:320)
+
+9月 13, 2024 9:30:04 下午 scala.meta.internal.pc.CompilerAccess handleError
+严重: A severe compiler error occurred, full details of the error can be found in the error report /home/focused_xy/cs/ysyx/ysyxSoC/.metals/.reports/metals-full/2024-09-13/r_compiler-error_(ysyxsoc)_21-30-04-037.md
+2024.09.13 21:30:05 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:30:05 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:30:05 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:30:05 INFO  time: compiled rocketchip.macros in 23ms
+2024.09.13 21:30:05 INFO  time: compiled rocketchip.hardfloat in 41ms
+2024.09.13 21:30:05 INFO  time: compiled rocketchip.cde in 61ms
+2024.09.13 21:30:49 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:30:49 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:30:49 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:30:49 INFO  time: compiled rocketchip.macros in 36ms
+2024.09.13 21:30:49 INFO  time: compiled rocketchip.hardfloat in 57ms
+2024.09.13 21:30:49 INFO  time: compiled rocketchip.cde in 77ms
+2024.09.13 21:33:18 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:33:18 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:33:18 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:33:18 INFO  time: compiled rocketchip.cde in 26ms
+2024.09.13 21:33:18 INFO  time: compiled rocketchip.hardfloat in 55ms
+2024.09.13 21:33:18 INFO  time: compiled rocketchip.macros in 76ms
+2024.09.13 21:33:18 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:33:18 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:33:18 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:33:18 INFO  time: compiled rocketchip.cde in 24ms
+2024.09.13 21:33:18 INFO  time: compiled rocketchip.hardfloat in 43ms
+2024.09.13 21:33:18 INFO  time: compiled rocketchip.macros in 64ms
+2024.09.13 21:33:19 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:33:19 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:33:19 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:33:19 INFO  time: compiled rocketchip.cde in 16ms
+2024.09.13 21:33:19 INFO  time: compiled rocketchip.hardfloat in 31ms
+2024.09.13 21:33:19 INFO  time: compiled rocketchip.macros in 56ms
+2024.09.13 21:33:20 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:33:20 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:33:20 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:33:20 INFO  time: compiled rocketchip.cde in 28ms
+2024.09.13 21:33:20 INFO  time: compiled rocketchip.hardfloat in 49ms
+2024.09.13 21:33:20 INFO  time: compiled rocketchip.macros in 76ms
+2024.09.13 21:33:20 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:33:20 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:33:20 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:33:20 INFO  time: compiled rocketchip.hardfloat in 20ms
+2024.09.13 21:33:20 INFO  time: compiled rocketchip.cde in 41ms
+2024.09.13 21:33:20 INFO  time: compiled rocketchip.macros in 58ms
+2024.09.13 21:33:20 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:33:20 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:33:20 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:33:20 INFO  time: compiled rocketchip.hardfloat in 20ms
+2024.09.13 21:33:20 INFO  time: compiled rocketchip.cde in 0.15s
+2024.09.13 21:33:20 INFO  time: compiled rocketchip.macros in 0.16s
+2024.09.13 21:33:28 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:33:28 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:33:28 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:33:28 INFO  time: compiled rocketchip.macros in 18ms
+2024.09.13 21:33:28 INFO  time: compiled rocketchip.hardfloat in 35ms
+2024.09.13 21:33:28 INFO  time: compiled rocketchip.cde in 62ms
+2024.09.13 21:33:36 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:33:36 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:33:36 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:33:36 INFO  time: compiled rocketchip.macros in 20ms
+2024.09.13 21:33:36 INFO  time: compiled rocketchip.hardfloat in 38ms
+2024.09.13 21:33:36 INFO  time: compiled rocketchip.cde in 60ms
+2024.09.13 21:33:38 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:33:38 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:33:38 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:33:38 INFO  time: compiled rocketchip.cde in 18ms
+2024.09.13 21:33:38 INFO  time: compiled rocketchip.hardfloat in 34ms
+2024.09.13 21:33:38 INFO  time: compiled rocketchip.macros in 57ms
+2024.09.13 21:33:51 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:33:51 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:33:51 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:33:51 INFO  time: compiled rocketchip.hardfloat in 17ms
+2024.09.13 21:33:51 INFO  time: compiled rocketchip.macros in 41ms
+2024.09.13 21:33:51 INFO  time: compiled rocketchip.cde in 63ms
+2024.09.13 21:33:51 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:33:51 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:33:51 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:33:51 INFO  time: compiled rocketchip.hardfloat in 14ms
+9月 13, 2024 9:33:51 下午 scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+信息: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+2024.09.13 21:33:51 INFO  time: compiled rocketchip.cde in 28ms
+2024.09.13 21:33:51 INFO  time: compiled rocketchip.macros in 47ms
+2024.09.13 21:33:51 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:33:51 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:33:51 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:33:51 INFO  time: compiled rocketchip.cde in 14ms
+2024.09.13 21:33:51 INFO  time: compiled rocketchip.hardfloat in 32ms
+2024.09.13 21:33:51 INFO  time: compiled rocketchip.macros in 49ms
+9月 13, 2024 9:34:04 下午 scala.meta.internal.pc.MetalsGlobal inverseSemanticdbSymbols
+严重: invalid SemanticDB symbol: ysyx/APBSPI#Impl#sIdle.
+-1 is out of bounds (min 0, max 2)
+9月 13, 2024 9:34:04 下午 scala.meta.internal.pc.CompilerAccess handleError
+严重: A severe compiler error occurred, full details of the error can be found in the error report /home/focused_xy/cs/ysyx/ysyxSoC/.metals/.reports/metals-full/2024-09-13/r_compiler-error_(ysyxsoc)_21-34-04-903.md
+2024.09.13 21:34:10 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:34:10 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:34:10 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:34:10 INFO  time: compiled rocketchip.macros in 19ms
+2024.09.13 21:34:10 INFO  time: compiled rocketchip.hardfloat in 30ms
+2024.09.13 21:34:10 INFO  time: compiled rocketchip.cde in 47ms
+9月 13, 2024 9:34:19 下午 scala.meta.internal.pc.MetalsGlobal inverseSemanticdbSymbols
+严重: invalid SemanticDB symbol: ysyx/APBSPI#Impl#isSPIAccess.
+-1 is out of bounds (min 0, max 2)
+9月 13, 2024 9:34:19 下午 scala.meta.internal.pc.CompilerAccess handleError
+严重: A severe compiler error occurred, full details of the error can be found in the error report /home/focused_xy/cs/ysyx/ysyxSoC/.metals/.reports/metals-full/2024-09-13/r_compiler-error_(ysyxsoc)_21-34-19-337.md
+2024.09.13 21:34:23 ERROR /home/focused_xy/cs/ysyx/ysyxSoC/src/device/SPI.scala
+scala.meta.internal.tokenizers.package$UnexpectedInputEndException
+	at scala.meta.internal.tokenizers.LegacyScanner.$anonfun$nextToken$1(LegacyScanner.scala:172)
+	at scala.Function0.apply$mcV$sp(Function0.scala:42)
+	at scala.meta.internal.tokenizers.LegacyScanner.scala$meta$internal$tokenizers$LegacyScanner$$nextToken(LegacyScanner.scala:178)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:172)
+	at scala.meta.internal.mtags.ScalaToplevelMtags$XtensionScanner.mtagsNextToken(ScalaToplevelMtags.scala:72)
+	at scala.meta.internal.mtags.ScalaToplevelMtags.loop(ScalaToplevelMtags.scala:500)
+	at scala.meta.internal.mtags.ScalaToplevelMtags.indexRoot(ScalaToplevelMtags.scala:84)
+	at scala.meta.internal.metals.SemanticdbDefinition$.foreachWithReturnMtags(SemanticdbDefinition.scala:81)
+	at scala.meta.internal.metals.Indexer.indexSourceFile(Indexer.scala:595)
+	at scala.meta.internal.metals.Indexer.$anonfun$reindexWorkspaceSources$3(Indexer.scala:693)
+	at scala.meta.internal.metals.Indexer.$anonfun$reindexWorkspaceSources$3$adapted(Indexer.scala:690)
+	at scala.collection.IterableOnceOps.foreach(IterableOnce.scala:619)
+	at scala.collection.IterableOnceOps.foreach$(IterableOnce.scala:617)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1303)
+	at scala.meta.internal.metals.Indexer.reindexWorkspaceSources(Indexer.scala:690)
+	at scala.meta.internal.metals.MetalsLspService.$anonfun$onChange$2(MetalsLspService.scala:952)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:687)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+
+2024.09.13 21:34:23 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:34:23 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:34:23 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:34:23 INFO  time: compiled rocketchip.macros in 18ms
+2024.09.13 21:34:23 INFO  time: compiled rocketchip.hardfloat in 29ms
+2024.09.13 21:34:23 INFO  time: compiled rocketchip.cde in 43ms
+9月 13, 2024 9:34:30 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 1177
+2024.09.13 21:34:35 ERROR /home/focused_xy/cs/ysyx/ysyxSoC/src/device/SPI.scala
+scala.meta.internal.tokenizers.package$UnexpectedInputEndException
+	at scala.meta.internal.tokenizers.LegacyScanner.$anonfun$nextToken$1(LegacyScanner.scala:172)
+	at scala.Function0.apply$mcV$sp(Function0.scala:42)
+	at scala.meta.internal.tokenizers.LegacyScanner.scala$meta$internal$tokenizers$LegacyScanner$$nextToken(LegacyScanner.scala:178)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:172)
+	at scala.meta.internal.mtags.ScalaToplevelMtags$XtensionScanner.mtagsNextToken(ScalaToplevelMtags.scala:72)
+	at scala.meta.internal.mtags.ScalaToplevelMtags.loop(ScalaToplevelMtags.scala:500)
+	at scala.meta.internal.mtags.ScalaToplevelMtags.indexRoot(ScalaToplevelMtags.scala:84)
+	at scala.meta.internal.metals.SemanticdbDefinition$.foreachWithReturnMtags(SemanticdbDefinition.scala:81)
+	at scala.meta.internal.metals.Indexer.indexSourceFile(Indexer.scala:595)
+	at scala.meta.internal.metals.Indexer.$anonfun$reindexWorkspaceSources$3(Indexer.scala:693)
+	at scala.meta.internal.metals.Indexer.$anonfun$reindexWorkspaceSources$3$adapted(Indexer.scala:690)
+	at scala.collection.IterableOnceOps.foreach(IterableOnce.scala:619)
+	at scala.collection.IterableOnceOps.foreach$(IterableOnce.scala:617)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1303)
+	at scala.meta.internal.metals.Indexer.reindexWorkspaceSources(Indexer.scala:690)
+	at scala.meta.internal.metals.MetalsLspService.$anonfun$onChange$2(MetalsLspService.scala:952)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:687)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+
+2024.09.13 21:34:35 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:34:35 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:34:35 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:34:35 INFO  time: compiled rocketchip.cde in 18ms
+2024.09.13 21:34:35 INFO  time: compiled rocketchip.hardfloat in 31ms
+2024.09.13 21:34:35 INFO  time: compiled rocketchip.macros in 44ms
+9月 13, 2024 9:34:49 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 1307
+9月 13, 2024 9:34:53 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 1357
+2024.09.13 21:35:06 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:35:06 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:35:06 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:35:06 INFO  time: compiled rocketchip.hardfloat in 22ms
+2024.09.13 21:35:06 INFO  time: compiled rocketchip.cde in 38ms
+2024.09.13 21:35:06 INFO  time: compiled rocketchip.macros in 53ms
+2024.09.13 21:35:25 WARN  Using indexes to guess the definition of APBBundle
+2024.09.13 21:35:26 WARN  Using indexes to guess the definition of APBBundle
+2024.09.13 21:35:26 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:35:26 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:35:26 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:35:26 INFO  time: compiled rocketchip.macros in 13ms
+2024.09.13 21:35:26 INFO  time: compiled rocketchip.hardfloat in 29ms
+2024.09.13 21:35:26 INFO  time: compiled rocketchip.cde in 54ms
+9月 13, 2024 9:35:26 下午 scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+信息: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+2024.09.13 21:35:29 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:35:29 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:35:29 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:35:29 INFO  time: compiled rocketchip.macros in 13ms
+2024.09.13 21:35:29 INFO  time: compiled rocketchip.hardfloat in 34ms
+2024.09.13 21:35:29 INFO  time: compiled rocketchip.cde in 51ms
+2024.09.13 21:36:50 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:36:50 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:36:50 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:36:50 INFO  time: compiled rocketchip.macros in 25ms
+2024.09.13 21:36:50 INFO  time: compiled rocketchip.hardfloat in 38ms
+2024.09.13 21:36:50 INFO  time: compiled rocketchip.cde in 51ms
+9月 13, 2024 9:37:06 下午 scala.meta.internal.pc.CompilerAccess handleError
+严重: A severe compiler error occurred, full details of the error can be found in the error report /home/focused_xy/cs/ysyx/ysyxSoC/.metals/.reports/metals-full/2024-09-13/r_compiler-error_(ysyxsoc)_21-37-06-576.md
+9月 13, 2024 9:37:06 下午 scala.meta.internal.pc.CompilerAccess handleError
+严重: A severe compiler error occurred, full details of the error can be found in the error report /home/focused_xy/cs/ysyx/ysyxSoC/.metals/.reports/metals-full/2024-09-13/r_compiler-error_(ysyxsoc)_21-37-06-576.md
+9月 13, 2024 9:37:24 下午 scala.meta.internal.pc.MetalsGlobal inverseSemanticdbSymbols
+严重: invalid SemanticDB symbol: ysyx/APBSPI#Impl#fire.
+illegal cyclic reference involving class Impl
+9月 13, 2024 9:37:27 下午 scala.meta.internal.pc.CompilerAccess handleError
+严重: -1 is out of bounds (min 0, max 2)
+java.lang.IndexOutOfBoundsException: -1 is out of bounds (min 0, max 2)
+	at scala.collection.mutable.ArrayBuffer.apply(ArrayBuffer.scala:106)
+	at scala.reflect.internal.Types$Type.findMemberInternal$1(Types.scala:1030)
+	at scala.reflect.internal.Types$Type.findMember(Types.scala:1035)
+	at scala.reflect.internal.Types$Type.memberBasedOnName(Types.scala:661)
+	at scala.reflect.internal.Types$Type.member(Types.scala:625)
+	at scala.tools.nsc.typechecker.Contexts$SymbolLookup.apply(Contexts.scala:1416)
+	at scala.tools.nsc.typechecker.Contexts$Context.lookupSymbol(Contexts.scala:1298)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedIdent$2(Typers.scala:5476)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedIdentOrWildcard$1(Typers.scala:5528)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5989)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6047)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typed1$41(Typers.scala:5078)
+	at scala.tools.nsc.typechecker.Typers$Typer.silent(Typers.scala:698)
+	at scala.tools.nsc.typechecker.Typers$Typer.normalTypedApply$1(Typers.scala:5080)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedApply$1(Typers.scala:5110)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5991)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6047)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedArg(Typers.scala:3421)
+	at scala.tools.nsc.typechecker.PatternTypers$PatternTyper.typedArgWithFormal$1(PatternTypers.scala:136)
+	at scala.tools.nsc.typechecker.PatternTypers$PatternTyper.$anonfun$typedArgsForFormals$4(PatternTypers.scala:150)
+	at scala.tools.nsc.typechecker.PatternTypers$PatternTyper.typedArgsForFormals(PatternTypers.scala:150)
+	at scala.tools.nsc.typechecker.PatternTypers$PatternTyper.typedArgsForFormals$(PatternTypers.scala:131)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedArgsForFormals(Typers.scala:203)
+	at scala.tools.nsc.typechecker.Typers$Typer.handleMonomorphicCall$1(Typers.scala:3753)
+	at scala.tools.nsc.typechecker.Typers$Typer.doTypedApply(Typers.scala:3804)
+	at scala.tools.nsc.typechecker.Typers$Typer.normalTypedApply$1(Typers.scala:5101)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedApply$1(Typers.scala:5110)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5991)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6047)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedArg(Typers.scala:3421)
+	at scala.tools.nsc.typechecker.PatternTypers$PatternTyper.typedArgWithFormal$1(PatternTypers.scala:136)
+	at scala.tools.nsc.typechecker.PatternTypers$PatternTyper.$anonfun$typedArgsForFormals$4(PatternTypers.scala:150)
+	at scala.tools.nsc.typechecker.PatternTypers$PatternTyper.typedArgsForFormals(PatternTypers.scala:150)
+	at scala.tools.nsc.typechecker.PatternTypers$PatternTyper.typedArgsForFormals$(PatternTypers.scala:131)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedArgsForFormals(Typers.scala:203)
+	at scala.tools.nsc.typechecker.Typers$Typer.handleMonomorphicCall$1(Typers.scala:3753)
+	at scala.tools.nsc.typechecker.Typers$Typer.doTypedApply(Typers.scala:3804)
+	at scala.tools.nsc.typechecker.Typers$Typer.normalTypedApply$1(Typers.scala:5101)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedApply$1(Typers.scala:5110)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5991)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6047)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedPattern$2(Typers.scala:6226)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedPattern$1(Typers.scala:6226)
+	at scala.tools.nsc.typechecker.TypeDiagnostics.typingInPattern(TypeDiagnostics.scala:71)
+	at scala.tools.nsc.typechecker.TypeDiagnostics.typingInPattern$(TypeDiagnostics.scala:68)
+	at scala.meta.internal.pc.MetalsGlobal$MetalsInteractiveAnalyzer.typingInPattern(MetalsGlobal.scala:76)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedPattern(Typers.scala:6226)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedCase(Typers.scala:2583)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedCases$1(Typers.scala:2617)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedCases(Typers.scala:2616)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedMatch(Typers.scala:2628)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedVirtualizedMatch$1(Typers.scala:4779)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedOutsidePatternMode$1(Typers.scala:5970)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:6001)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6047)
+	at scala.tools.nsc.typechecker.Typers$Typer.computeType(Typers.scala:6136)
+	at scala.tools.nsc.typechecker.Namers$Namer.assignTypeToTree(Namers.scala:1127)
+	at scala.tools.nsc.typechecker.Namers$Namer.valDefSig(Namers.scala:1743)
+	at scala.tools.nsc.typechecker.Namers$Namer.memberSig(Namers.scala:1928)
+	at scala.tools.nsc.typechecker.Namers$Namer.typeSig(Namers.scala:1878)
+	at scala.tools.nsc.typechecker.Namers$Namer$MonoTypeCompleter.completeImpl(Namers.scala:874)
+	at scala.tools.nsc.typechecker.Namers$LockingTypeCompleter.complete(Namers.scala:2075)
+	at scala.tools.nsc.typechecker.Namers$LockingTypeCompleter.complete$(Namers.scala:2073)
+	at scala.tools.nsc.typechecker.Namers$TypeCompleterBase.complete(Namers.scala:2068)
+	at scala.reflect.internal.Symbols$Symbol.completeInfo(Symbols.scala:1563)
+	at scala.reflect.internal.Symbols$Symbol.info(Symbols.scala:1535)
+	at scala.reflect.internal.Symbols$Symbol.cookJavaRawInfo(Symbols.scala:1751)
+	at scala.tools.nsc.typechecker.Infer$Inferencer.checkAccessible(Infer.scala:302)
+	at scala.tools.nsc.typechecker.Typers$Typer.makeAccessible(Typers.scala:577)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedIdent$2(Typers.scala:5505)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedIdentOrWildcard$1(Typers.scala:5528)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5989)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6047)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedSelectOrSuperCall$1(Typers.scala:6145)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5992)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6047)
+	at scala.tools.nsc.typechecker.Typers$Typer.computeType(Typers.scala:6136)
+	at scala.tools.nsc.typechecker.Namers$Namer.assignTypeToTree(Namers.scala:1127)
+	at scala.tools.nsc.typechecker.Namers$Namer.valDefSig(Namers.scala:1743)
+	at scala.tools.nsc.typechecker.Namers$Namer.memberSig(Namers.scala:1928)
+	at scala.tools.nsc.typechecker.Namers$Namer.typeSig(Namers.scala:1878)
+	at scala.tools.nsc.typechecker.Namers$Namer$ValTypeCompleter.completeImpl(Namers.scala:944)
+	at scala.tools.nsc.typechecker.Namers$Namer$AccessorTypeCompleter.completeImpl(Namers.scala:968)
+	at scala.tools.nsc.typechecker.Namers$LockingTypeCompleter.complete(Namers.scala:2075)
+	at scala.tools.nsc.typechecker.Namers$LockingTypeCompleter.complete$(Namers.scala:2073)
+	at scala.tools.nsc.typechecker.Namers$TypeCompleterBase.complete(Namers.scala:2068)
+	at scala.reflect.internal.Symbols$Symbol.completeInfo(Symbols.scala:1563)
+	at scala.reflect.internal.Symbols$Symbol.info(Symbols.scala:1535)
+	at scala.meta.internal.pc.CompletionItemResolver.fullDocstring(CompletionItemResolver.scala:66)
+	at scala.meta.internal.pc.CompletionItemResolver.$anonfun$handleSymbol$2(CompletionItemResolver.scala:39)
+	at scala.meta.internal.pc.ItemResolver.enrichDocs(ItemResolver.scala:75)
+	at scala.meta.internal.pc.ItemResolver.enrichDocs$(ItemResolver.scala:14)
+	at scala.meta.internal.pc.CompletionItemResolver.enrichDocs(CompletionItemResolver.scala:8)
+	at scala.meta.internal.pc.CompletionItemResolver.handleSymbol(CompletionItemResolver.scala:40)
+	at scala.meta.internal.pc.CompletionItemResolver.resolve(CompletionItemResolver.scala:24)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$completionItemResolve$1(ScalaPresentationCompiler.scala:320)
+
+9月 13, 2024 9:37:27 下午 scala.meta.internal.pc.CompilerAccess handleError
+严重: A severe compiler error occurred, full details of the error can be found in the error report /home/focused_xy/cs/ysyx/ysyxSoC/.metals/.reports/metals-full/2024-09-13/r_compiler-error_(ysyxsoc)_21-37-27-047.md
+2024.09.13 21:37:28 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:37:28 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:37:28 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:37:28 INFO  time: compiled rocketchip.macros in 19ms
+2024.09.13 21:37:28 INFO  time: compiled rocketchip.hardfloat in 39ms
+2024.09.13 21:37:28 INFO  time: compiled rocketchip.cde in 54ms
+2024.09.13 21:41:00 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:41:00 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:41:00 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:41:00 INFO  time: compiled rocketchip.macros in 21ms
+2024.09.13 21:41:00 INFO  time: compiled rocketchip.hardfloat in 37ms
+2024.09.13 21:41:00 INFO  time: compiled rocketchip.cde in 51ms
+2024.09.13 21:41:03 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:41:03 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:41:03 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:41:03 INFO  time: compiled rocketchip.cde in 15ms
+2024.09.13 21:41:03 INFO  time: compiled rocketchip.hardfloat in 31ms
+2024.09.13 21:41:03 INFO  time: compiled rocketchip.macros in 48ms
+2024.09.13 21:41:31 WARN  Using indexes to guess the definition of address
+2024.09.13 21:41:31 WARN  Using indexes to guess the definition of address
+2024.09.13 21:41:31 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:41:31 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:41:31 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:41:31 INFO  time: compiled rocketchip.cde in 22ms
+2024.09.13 21:41:31 INFO  time: compiled rocketchip.hardfloat in 43ms
+2024.09.13 21:41:31 INFO  time: compiled rocketchip.macros in 56ms
+2024.09.13 21:41:36 WARN  Using indexes to guess the definition of AddressSet
+2024.09.13 21:41:36 WARN  Using indexes to guess the definition of AddressSet
+2024.09.13 21:42:02 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:42:02 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:42:02 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:42:02 INFO  time: compiled rocketchip.hardfloat in 14ms
+2024.09.13 21:42:02 INFO  time: compiled rocketchip.cde in 28ms
+2024.09.13 21:42:02 INFO  time: compiled rocketchip.macros in 44ms
+2024.09.13 21:42:23 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:42:23 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:42:23 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:42:23 INFO  time: compiled rocketchip.macros in 16ms
+2024.09.13 21:42:23 INFO  time: compiled rocketchip.cde in 30ms
+2024.09.13 21:42:23 INFO  time: compiled rocketchip.hardfloat in 46ms
+2024.09.13 21:43:35 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:43:35 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:43:35 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:43:35 INFO  time: compiled rocketchip.macros in 16ms
+2024.09.13 21:43:35 INFO  time: compiled rocketchip.hardfloat in 29ms
+2024.09.13 21:43:35 INFO  time: compiled rocketchip.cde in 42ms
+2024.09.13 21:44:15 WARN  Using indexes to guess the definition of io
+2024.09.13 21:44:15 WARN  Using indexes to guess the definition of address
+2024.09.13 21:44:17 WARN  Using indexes to guess the definition of address
+2024.09.13 21:44:20 WARN  Using indexes to guess the definition of address
+2024.09.13 21:44:20 WARN  Using indexes to guess the definition of address
+2024.09.13 21:44:20 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:44:20 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:44:20 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:44:20 INFO  time: compiled rocketchip.macros in 20ms
+2024.09.13 21:44:20 INFO  time: compiled rocketchip.hardfloat in 41ms
+2024.09.13 21:44:20 INFO  time: compiled rocketchip.cde in 58ms
+2024.09.13 21:44:25 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:44:25 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:44:25 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:44:25 INFO  time: compiled rocketchip.hardfloat in 14ms
+2024.09.13 21:44:25 INFO  time: compiled rocketchip.macros in 33ms
+2024.09.13 21:44:25 INFO  time: compiled rocketchip.cde in 62ms
+2024.09.13 21:44:31 WARN  Using indexes to guess the definition of misaligned
+2024.09.13 21:44:32 WARN  Using indexes to guess the definition of misaligned
+2024.09.13 21:44:32 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:44:32 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:44:32 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:44:32 INFO  time: compiled rocketchip.cde in 16ms
+2024.09.13 21:44:32 INFO  time: compiled rocketchip.macros in 33ms
+2024.09.13 21:44:32 INFO  time: compiled rocketchip.hardfloat in 47ms
+2024.09.13 21:44:34 WARN  Using indexes to guess the definition of AddressSet
+2024.09.13 21:44:34 WARN  Using indexes to guess the definition of AddressSet
+2024.09.13 21:45:08 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:45:08 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:45:08 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:45:08 INFO  time: compiled rocketchip.cde in 13ms
+2024.09.13 21:45:08 INFO  time: compiled rocketchip.hardfloat in 24ms
+2024.09.13 21:45:08 INFO  time: compiled rocketchip.macros in 40ms
+2024.09.13 21:45:16 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:45:16 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:45:16 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:45:16 INFO  time: compiled rocketchip.macros in 12ms
+2024.09.13 21:45:16 INFO  time: compiled rocketchip.hardfloat in 26ms
+2024.09.13 21:45:16 INFO  time: compiled rocketchip.cde in 43ms
+2024.09.13 21:45:27 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:45:27 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:45:27 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:45:27 INFO  time: compiled rocketchip.hardfloat in 13ms
+2024.09.13 21:45:27 INFO  time: compiled rocketchip.macros in 26ms
+2024.09.13 21:45:27 INFO  time: compiled rocketchip.cde in 43ms
+2024.09.13 21:46:12 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:46:12 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:46:12 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:46:12 INFO  time: compiled rocketchip.hardfloat in 14ms
+2024.09.13 21:46:12 INFO  time: compiled rocketchip.macros in 26ms
+2024.09.13 21:46:12 INFO  time: compiled rocketchip.cde in 40ms
+2024.09.13 21:47:11 WARN  Using indexes to guess the definition of paddr
+2024.09.13 21:47:11 WARN  Using indexes to guess the definition of paddr
+2024.09.13 21:47:11 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:47:11 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:47:11 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:47:11 INFO  time: compiled rocketchip.macros in 16ms
+2024.09.13 21:47:11 INFO  time: compiled rocketchip.hardfloat in 49ms
+2024.09.13 21:47:11 INFO  time: compiled rocketchip.cde in 67ms
+2024.09.13 21:47:14 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:47:14 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:47:14 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:47:14 INFO  time: compiled rocketchip.cde in 15ms
+2024.09.13 21:47:14 INFO  time: compiled rocketchip.macros in 29ms
+2024.09.13 21:47:14 INFO  time: compiled rocketchip.hardfloat in 43ms
+2024.09.13 21:47:25 WARN  Using indexes to guess the definition of APBDelayer
+2024.09.13 21:47:25 WARN  Using indexes to guess the definition of node
+2024.09.13 21:47:25 WARN  Using indexes to guess the definition of node
+2024.09.13 21:47:25 WARN  Using indexes to guess the definition of node
+2024.09.13 21:47:25 WARN  Using indexes to guess the definition of supportsWrite
+2024.09.13 21:47:58 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:47:58 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:47:58 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:47:58 INFO  time: compiled rocketchip.macros in 12ms
+2024.09.13 21:47:58 INFO  time: compiled rocketchip.hardfloat in 27ms
+2024.09.13 21:47:58 INFO  time: compiled rocketchip.cde in 46ms
+2024.09.13 21:47:59 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:47:59 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:47:59 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:47:59 INFO  time: compiled rocketchip.hardfloat in 13ms
+2024.09.13 21:47:59 INFO  time: compiled rocketchip.macros in 27ms
+2024.09.13 21:47:59 INFO  time: compiled rocketchip.cde in 43ms
+2024.09.13 21:48:00 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:48:00 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:48:00 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:48:00 INFO  time: compiled rocketchip.macros in 15ms
+2024.09.13 21:48:00 INFO  time: compiled rocketchip.cde in 27ms
+2024.09.13 21:48:00 INFO  time: compiled rocketchip.hardfloat in 45ms
+2024.09.13 21:48:06 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:48:06 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:48:06 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:48:06 INFO  time: compiled rocketchip.macros in 12ms
+2024.09.13 21:48:06 INFO  time: compiled rocketchip.hardfloat in 25ms
+2024.09.13 21:48:06 INFO  time: compiled rocketchip.cde in 40ms
+2024.09.13 21:48:07 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:48:07 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:48:07 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:48:07 INFO  time: compiled rocketchip.cde in 12ms
+2024.09.13 21:48:07 INFO  time: compiled rocketchip.hardfloat in 25ms
+2024.09.13 21:48:07 INFO  time: compiled rocketchip.macros in 50ms
+2024.09.13 21:48:09 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:48:09 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:48:09 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:48:09 INFO  time: compiled rocketchip.macros in 12ms
+2024.09.13 21:48:09 INFO  time: compiled rocketchip.hardfloat in 23ms
+2024.09.13 21:48:09 INFO  time: compiled rocketchip.cde in 38ms
+2024.09.13 21:48:18 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:48:18 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:48:18 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:48:18 INFO  time: compiled rocketchip.cde in 16ms
+2024.09.13 21:48:18 INFO  time: compiled rocketchip.hardfloat in 32ms
+2024.09.13 21:48:18 INFO  time: compiled rocketchip.macros in 45ms
+2024.09.13 21:48:53 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:48:53 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:48:53 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:48:53 INFO  time: compiled rocketchip.cde in 15ms
+2024.09.13 21:48:53 INFO  time: compiled rocketchip.hardfloat in 27ms
+2024.09.13 21:48:53 INFO  time: compiled rocketchip.macros in 38ms
+2024.09.13 21:49:26 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:49:26 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:49:26 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:49:26 INFO  time: compiled rocketchip.macros in 13ms
+2024.09.13 21:49:26 INFO  time: compiled rocketchip.hardfloat in 25ms
+2024.09.13 21:49:26 INFO  time: compiled rocketchip.cde in 45ms
+2024.09.13 21:49:31 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:49:31 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:49:31 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:49:31 INFO  time: compiled rocketchip.macros in 13ms
+2024.09.13 21:49:31 INFO  time: compiled rocketchip.hardfloat in 23ms
+2024.09.13 21:49:31 INFO  time: compiled rocketchip.cde in 38ms
+2024.09.13 21:49:33 WARN  Using indexes to guess the definition of APBSlaveParameters
+2024.09.13 21:49:33 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:49:33 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:49:33 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:49:33 INFO  time: compiled rocketchip.hardfloat in 11ms
+2024.09.13 21:49:33 INFO  time: compiled rocketchip.macros in 24ms
+2024.09.13 21:49:33 INFO  time: compiled rocketchip.cde in 35ms
+2024.09.13 21:49:33 WARN  Using indexes to guess the definition of APBSlaveNode
+2024.09.13 21:49:34 WARN  Using indexes to guess the definition of APBSlaveNode
+2024.09.13 21:49:43 WARN  Using indexes to guess the definition of SinkNode
+2024.09.13 21:49:44 WARN  Using indexes to guess the definition of SinkNode
+2024.09.13 21:49:49 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:49:49 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:49:49 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:49:49 INFO  time: compiled rocketchip.macros in 14ms
+2024.09.13 21:49:49 INFO  time: compiled rocketchip.hardfloat in 26ms
+2024.09.13 21:49:49 INFO  time: compiled rocketchip.cde in 42ms
+2024.09.13 21:50:02 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:50:02 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:50:02 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:50:02 INFO  time: compiled rocketchip.cde in 11ms
+2024.09.13 21:50:02 INFO  time: compiled rocketchip.hardfloat in 23ms
+2024.09.13 21:50:02 INFO  time: compiled rocketchip.macros in 56ms
+2024.09.13 21:50:03 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:50:03 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:50:03 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:50:03 INFO  time: compiled rocketchip.cde in 11ms
+2024.09.13 21:50:03 INFO  time: compiled rocketchip.hardfloat in 21ms
+2024.09.13 21:50:03 INFO  time: compiled rocketchip.macros in 35ms
+2024.09.13 21:50:23 WARN  Using indexes to guess the definition of APBBundle
+2024.09.13 21:50:24 WARN  Using indexes to guess the definition of APBBundle
+2024.09.13 21:50:24 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:50:24 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:50:24 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:50:24 INFO  time: compiled rocketchip.macros in 11ms
+2024.09.13 21:50:24 INFO  time: compiled rocketchip.cde in 23ms
+2024.09.13 21:50:24 INFO  time: compiled rocketchip.hardfloat in 38ms
+2024.09.13 21:50:27 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:50:27 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:50:27 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:50:27 INFO  time: compiled rocketchip.macros in 12ms
+2024.09.13 21:50:27 INFO  time: compiled rocketchip.hardfloat in 27ms
+2024.09.13 21:50:27 INFO  time: compiled rocketchip.cde in 53ms
+2024.09.13 21:51:52 WARN  Using indexes to guess the definition of in
+2024.09.13 21:51:52 WARN  Using indexes to guess the definition of node
+2024.09.13 21:51:52 WARN  Using indexes to guess the definition of node
+2024.09.13 21:52:02 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:52:02 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:52:02 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:52:02 INFO  time: compiled rocketchip.macros in 14ms
+2024.09.13 21:52:02 INFO  time: compiled rocketchip.cde in 26ms
+2024.09.13 21:52:02 INFO  time: compiled rocketchip.hardfloat in 38ms
+2024.09.13 21:56:26 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:56:26 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:56:26 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:56:26 INFO  time: compiled rocketchip.macros in 15ms
+2024.09.13 21:56:26 INFO  time: compiled rocketchip.hardfloat in 29ms
+2024.09.13 21:56:26 INFO  time: compiled rocketchip.cde in 39ms
+9月 13, 2024 9:58:31 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 3379
+2024.09.13 21:58:34 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:58:34 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:58:34 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:58:34 INFO  time: compiled rocketchip.macros in 21ms
+2024.09.13 21:58:34 INFO  time: compiled rocketchip.cde in 37ms
+2024.09.13 21:58:34 INFO  time: compiled rocketchip.hardfloat in 50ms
+2024.09.13 21:59:12 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 21:59:12 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 21:59:12 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 21:59:12 INFO  time: compiled rocketchip.cde in 15ms
+2024.09.13 21:59:12 INFO  time: compiled rocketchip.macros in 28ms
+2024.09.13 21:59:12 INFO  time: compiled rocketchip.hardfloat in 42ms
+2024.09.13 22:00:33 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:00:33 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:00:33 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:00:33 INFO  time: compiled rocketchip.cde in 16ms
+2024.09.13 22:00:33 INFO  time: compiled rocketchip.macros in 27ms
+2024.09.13 22:00:33 INFO  time: compiled rocketchip.hardfloat in 40ms
+2024.09.13 22:00:43 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:00:43 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:00:43 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:00:43 INFO  time: compiled rocketchip.cde in 11ms
+2024.09.13 22:00:43 INFO  time: compiled rocketchip.macros in 25ms
+2024.09.13 22:00:43 INFO  time: compiled rocketchip.hardfloat in 51ms
+2024.09.13 22:00:43 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:00:43 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:00:43 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:00:43 INFO  time: compiled rocketchip.cde in 11ms
+2024.09.13 22:00:43 INFO  time: compiled rocketchip.hardfloat in 21ms
+2024.09.13 22:00:43 INFO  time: compiled rocketchip.macros in 33ms
+2024.09.13 22:00:47 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:00:47 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:00:47 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:00:47 INFO  time: compiled rocketchip.hardfloat in 11ms
+2024.09.13 22:00:47 INFO  time: compiled rocketchip.macros in 22ms
+2024.09.13 22:00:47 INFO  time: compiled rocketchip.cde in 34ms
+2024.09.13 22:01:07 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:01:07 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:01:07 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:01:07 INFO  time: compiled rocketchip.hardfloat in 13ms
+2024.09.13 22:01:07 INFO  time: compiled rocketchip.macros in 24ms
+2024.09.13 22:01:07 INFO  time: compiled rocketchip.cde in 37ms
+2024.09.13 22:01:07 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:01:07 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:01:07 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:01:07 INFO  time: compiled rocketchip.macros in 12ms
+2024.09.13 22:01:07 INFO  time: compiled rocketchip.hardfloat in 22ms
+2024.09.13 22:01:07 INFO  time: compiled rocketchip.cde in 57ms
+2024.09.13 22:01:12 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:01:12 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:01:12 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:01:12 INFO  time: compiled rocketchip.macros in 10ms
+2024.09.13 22:01:12 INFO  time: compiled rocketchip.hardfloat in 23ms
+2024.09.13 22:01:12 INFO  time: compiled rocketchip.cde in 36ms
+9月 13, 2024 10:01:19 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 3818
+9月 13, 2024 10:01:29 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 3914
+2024.09.13 22:01:30 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:01:30 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:01:30 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:01:30 INFO  time: compiled rocketchip.hardfloat in 14ms
+2024.09.13 22:01:30 INFO  time: compiled rocketchip.cde in 25ms
+2024.09.13 22:01:30 INFO  time: compiled rocketchip.macros in 36ms
+2024.09.13 22:02:02 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:02:02 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:02:02 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:02:02 INFO  time: compiled rocketchip.cde in 17ms
+2024.09.13 22:02:02 INFO  time: compiled rocketchip.hardfloat in 30ms
+2024.09.13 22:02:02 INFO  time: compiled rocketchip.macros in 48ms
+2024.09.13 22:02:27 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:02:27 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:02:27 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:02:27 INFO  time: compiled rocketchip.cde in 15ms
+2024.09.13 22:02:27 INFO  time: compiled rocketchip.hardfloat in 29ms
+2024.09.13 22:02:27 INFO  time: compiled rocketchip.macros in 41ms
+2024.09.13 22:02:36 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:02:36 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:02:36 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:02:36 INFO  time: compiled rocketchip.macros in 13ms
+2024.09.13 22:02:36 INFO  time: compiled rocketchip.hardfloat in 24ms
+2024.09.13 22:02:36 INFO  time: compiled rocketchip.cde in 37ms
+2024.09.13 22:03:19 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:03:19 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:03:19 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:03:19 INFO  time: compiled rocketchip.macros in 11ms
+2024.09.13 22:03:19 INFO  time: compiled rocketchip.cde in 32ms
+2024.09.13 22:03:19 INFO  time: compiled rocketchip.hardfloat in 45ms
+2024.09.13 22:03:19 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:03:19 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:03:19 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:03:19 INFO  time: compiled rocketchip.macros in 13ms
+2024.09.13 22:03:19 INFO  time: compiled rocketchip.hardfloat in 25ms
+2024.09.13 22:03:19 INFO  time: compiled rocketchip.cde in 39ms
+9月 13, 2024 10:24:21 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 4403
+2024.09.13 22:24:29 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:24:29 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:24:29 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:24:29 INFO  time: compiled rocketchip.hardfloat in 15ms
+2024.09.13 22:24:29 INFO  time: compiled rocketchip.cde in 28ms
+2024.09.13 22:24:29 INFO  time: compiled rocketchip.macros in 43ms
+2024.09.13 22:24:45 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:24:45 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:24:45 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:24:45 INFO  time: compiled rocketchip.macros in 11ms
+2024.09.13 22:24:45 INFO  time: compiled rocketchip.cde in 20ms
+2024.09.13 22:24:45 INFO  time: compiled rocketchip.hardfloat in 38ms
+2024.09.13 22:24:45 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:24:45 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:24:45 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:24:45 INFO  time: compiled rocketchip.macros in 15ms
+2024.09.13 22:24:45 INFO  time: compiled rocketchip.hardfloat in 24ms
+2024.09.13 22:24:45 INFO  time: compiled rocketchip.cde in 42ms
+2024.09.13 22:24:50 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:24:50 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:24:50 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:24:50 INFO  time: compiled rocketchip.macros in 12ms
+2024.09.13 22:24:50 INFO  time: compiled rocketchip.cde in 24ms
+2024.09.13 22:24:50 INFO  time: compiled rocketchip.hardfloat in 34ms
+2024.09.13 22:24:53 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:24:53 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:24:53 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:24:53 INFO  time: compiled rocketchip.cde in 12ms
+2024.09.13 22:24:53 INFO  time: compiled rocketchip.hardfloat in 26ms
+2024.09.13 22:24:53 INFO  time: compiled rocketchip.macros in 38ms
+2024.09.13 22:25:07 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:25:07 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:25:07 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:25:07 INFO  time: compiled rocketchip.cde in 10ms
+2024.09.13 22:25:07 INFO  time: compiled rocketchip.hardfloat in 21ms
+2024.09.13 22:25:07 INFO  time: compiled rocketchip.macros in 31ms
+2024.09.13 22:25:23 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:25:23 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:25:23 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:25:23 INFO  time: compiled rocketchip.macros in 10ms
+2024.09.13 22:25:23 INFO  time: compiled rocketchip.hardfloat in 22ms
+2024.09.13 22:25:23 INFO  time: compiled rocketchip.cde in 33ms
+2024.09.13 22:25:28 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:25:28 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:25:28 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:25:28 INFO  time: compiled rocketchip.macros in 10ms
+2024.09.13 22:25:28 INFO  time: compiled rocketchip.hardfloat in 22ms
+2024.09.13 22:25:28 INFO  time: compiled rocketchip.cde in 33ms
+2024.09.13 22:25:35 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:25:35 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:25:35 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:25:35 INFO  time: compiled rocketchip.hardfloat in 25ms
+2024.09.13 22:25:35 INFO  time: compiled rocketchip.cde in 42ms
+2024.09.13 22:25:35 INFO  time: compiled rocketchip.macros in 53ms
+9月 13, 2024 10:26:35 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 4733
+2024.09.13 22:26:39 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:26:39 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:26:39 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:26:39 INFO  time: compiled rocketchip.cde in 14ms
+2024.09.13 22:26:39 INFO  time: compiled rocketchip.hardfloat in 50ms
+2024.09.13 22:26:39 INFO  time: compiled rocketchip.macros in 60ms
+2024.09.13 22:26:43 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:26:43 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:26:43 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:26:43 INFO  time: compiled rocketchip.macros in 9ms
+2024.09.13 22:26:43 INFO  time: compiled rocketchip.hardfloat in 20ms
+2024.09.13 22:26:43 INFO  time: compiled rocketchip.cde in 30ms
+2024.09.13 22:26:46 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:26:46 INFO  time: compiled rocketchip.cde in 12ms
+2024.09.13 22:26:46 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:26:46 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:26:46 INFO  time: compiled rocketchip.macros in 12ms
+2024.09.13 22:26:46 INFO  time: compiled rocketchip.hardfloat in 22ms
+9月 13, 2024 10:27:02 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 4862
+2024.09.13 22:27:04 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:27:04 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:27:04 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:27:04 INFO  time: compiled rocketchip.cde in 12ms
+2024.09.13 22:27:04 INFO  time: compiled rocketchip.macros in 15ms
+2024.09.13 22:27:04 INFO  time: compiled rocketchip.hardfloat in 35ms
+2024.09.13 22:27:26 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:27:26 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:27:26 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:27:26 INFO  time: compiled rocketchip.hardfloat in 14ms
+2024.09.13 22:27:26 INFO  time: compiled rocketchip.cde in 23ms
+2024.09.13 22:27:26 INFO  time: compiled rocketchip.macros in 34ms
+2024.09.13 22:27:33 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:27:33 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:27:33 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:27:33 INFO  time: compiled rocketchip.cde in 23ms
+2024.09.13 22:27:33 INFO  time: compiled rocketchip.hardfloat in 32ms
+2024.09.13 22:27:33 INFO  time: compiled rocketchip.macros in 45ms
+2024.09.13 22:27:37 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:27:37 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:27:37 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:27:37 INFO  time: compiled rocketchip.hardfloat in 13ms
+2024.09.13 22:27:37 INFO  time: compiled rocketchip.cde in 29ms
+2024.09.13 22:27:37 INFO  time: compiled rocketchip.macros in 39ms
+2024.09.13 22:27:44 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:27:44 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:27:44 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:27:44 INFO  time: compiled rocketchip.cde in 12ms
+2024.09.13 22:27:44 INFO  time: compiled rocketchip.hardfloat in 21ms
+2024.09.13 22:27:44 INFO  time: compiled rocketchip.macros in 39ms
+2024.09.13 22:27:46 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:27:46 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:27:46 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:27:46 INFO  time: compiled rocketchip.cde in 9ms
+2024.09.13 22:27:46 INFO  time: compiled rocketchip.hardfloat in 23ms
+2024.09.13 22:27:46 INFO  time: compiled rocketchip.macros in 33ms
+2024.09.13 22:27:58 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:27:58 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:27:58 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:27:58 INFO  time: compiled rocketchip.hardfloat in 10ms
+2024.09.13 22:27:58 INFO  time: compiled rocketchip.cde in 21ms
+2024.09.13 22:27:58 INFO  time: compiled rocketchip.macros in 32ms
+2024.09.13 22:28:03 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:28:03 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:28:03 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:28:03 INFO  time: compiled rocketchip.cde in 12ms
+2024.09.13 22:28:03 INFO  time: compiled rocketchip.hardfloat in 21ms
+2024.09.13 22:28:03 INFO  time: compiled rocketchip.macros in 32ms
+2024.09.13 22:28:04 WARN  Using indexes to guess the definition of ::
+2024.09.13 22:28:18 WARN  Using indexes to guess the definition of Enum
+9月 13, 2024 10:29:02 下午 scala.meta.internal.pc.CompilerAccess handleError
+严重: A severe compiler error occurred, full details of the error can be found in the error report /home/focused_xy/cs/ysyx/ysyxSoC/.metals/.reports/metals-full/2024-09-13/r_compiler-error_(ysyxsoc)_22-29-02-564.md
+9月 13, 2024 10:29:02 下午 scala.meta.internal.pc.CompilerAccess handleError
+严重: A severe compiler error occurred, full details of the error can be found in the error report /home/focused_xy/cs/ysyx/ysyxSoC/.metals/.reports/metals-full/2024-09-13/r_compiler-error_(ysyxsoc)_22-29-02-565.md
+2024.09.13 22:29:23 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:29:23 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:29:23 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:29:23 INFO  time: compiled rocketchip.cde in 48ms
+2024.09.13 22:29:23 INFO  time: compiled rocketchip.hardfloat in 90ms
+2024.09.13 22:29:23 INFO  time: compiled rocketchip.macros in 0.14s
+2024.09.13 22:30:30 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:30:30 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:30:30 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:30:30 INFO  time: compiled rocketchip.macros in 51ms
+2024.09.13 22:30:30 INFO  time: compiled rocketchip.hardfloat in 71ms
+2024.09.13 22:30:30 INFO  time: compiled rocketchip.cde in 96ms
+2024.09.13 22:30:31 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:30:31 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:30:31 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:30:31 INFO  time: compiled rocketchip.cde in 17ms
+2024.09.13 22:30:31 INFO  time: compiled rocketchip.macros in 31ms
+2024.09.13 22:30:31 INFO  time: compiled rocketchip.hardfloat in 54ms
+2024.09.13 22:30:36 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:30:36 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:30:36 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:30:36 INFO  time: compiled rocketchip.cde in 19ms
+2024.09.13 22:30:36 INFO  time: compiled rocketchip.hardfloat in 34ms
+2024.09.13 22:30:36 INFO  time: compiled rocketchip.macros in 47ms
+2024.09.13 22:31:00 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:31:00 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:31:00 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:31:00 INFO  time: compiled rocketchip.cde in 13ms
+2024.09.13 22:31:00 INFO  time: compiled rocketchip.hardfloat in 28ms
+2024.09.13 22:31:00 INFO  time: compiled rocketchip.macros in 41ms
+2024.09.13 22:31:16 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:31:16 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:31:16 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:31:16 INFO  time: compiled rocketchip.macros in 12ms
+2024.09.13 22:31:16 INFO  time: compiled rocketchip.hardfloat in 31ms
+2024.09.13 22:31:16 INFO  time: compiled rocketchip.cde in 45ms
+2024.09.13 22:31:21 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:31:21 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:31:21 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:31:21 INFO  time: compiled rocketchip.cde in 11ms
+2024.09.13 22:31:21 INFO  time: compiled rocketchip.hardfloat in 19ms
+2024.09.13 22:31:21 INFO  time: compiled rocketchip.macros in 32ms
+9月 13, 2024 10:31:51 下午 scala.meta.internal.pc.CompilerAccess handleError
+严重: A severe compiler error occurred, full details of the error can be found in the error report /home/focused_xy/cs/ysyx/ysyxSoC/.metals/.reports/metals-full/2024-09-13/r_compiler-error_(ysyxsoc)_22-31-51-030.md
+2024.09.13 22:31:52 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:31:52 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:31:52 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:31:52 INFO  time: compiled rocketchip.macros in 14ms
+2024.09.13 22:31:52 INFO  time: compiled rocketchip.hardfloat in 24ms
+2024.09.13 22:31:52 INFO  time: compiled rocketchip.cde in 39ms
+2024.09.13 22:32:07 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:32:07 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:32:07 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:32:07 INFO  time: compiled rocketchip.cde in 10ms
+2024.09.13 22:32:07 INFO  time: compiled rocketchip.hardfloat in 21ms
+2024.09.13 22:32:07 INFO  time: compiled rocketchip.macros in 37ms
+2024.09.13 22:32:07 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:32:07 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:32:07 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:32:07 INFO  time: compiled rocketchip.cde in 12ms
+2024.09.13 22:32:07 INFO  time: compiled rocketchip.hardfloat in 26ms
+2024.09.13 22:32:07 INFO  time: compiled rocketchip.macros in 40ms
+2024.09.13 22:32:07 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:32:07 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:32:07 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:32:07 INFO  time: compiled rocketchip.cde in 10ms
+2024.09.13 22:32:07 INFO  time: compiled rocketchip.hardfloat in 21ms
+2024.09.13 22:32:08 INFO  time: compiled rocketchip.macros in 36ms
+2024.09.13 22:32:10 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:32:10 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:32:10 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:32:10 INFO  time: compiled rocketchip.cde in 12ms
+2024.09.13 22:32:10 INFO  time: compiled rocketchip.hardfloat in 26ms
+2024.09.13 22:32:10 INFO  time: compiled rocketchip.macros in 39ms
+2024.09.13 22:32:11 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:32:11 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:32:11 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:32:11 INFO  time: compiled rocketchip.macros in 11ms
+2024.09.13 22:32:11 INFO  time: compiled rocketchip.hardfloat in 24ms
+2024.09.13 22:32:11 INFO  time: compiled rocketchip.cde in 41ms
+2024.09.13 22:32:11 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:32:11 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:32:11 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:32:11 INFO  time: compiled rocketchip.macros in 11ms
+2024.09.13 22:32:11 INFO  time: compiled rocketchip.hardfloat in 18ms
+2024.09.13 22:32:11 INFO  time: compiled rocketchip.cde in 30ms
+2024.09.13 22:32:17 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:32:17 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:32:17 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:32:17 INFO  time: compiled rocketchip.cde in 13ms
+2024.09.13 22:32:17 INFO  time: compiled rocketchip.hardfloat in 22ms
+2024.09.13 22:32:17 INFO  time: compiled rocketchip.macros in 34ms
+2024.09.13 22:32:19 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:32:19 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:32:19 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:32:19 INFO  time: compiled rocketchip.macros in 13ms
+2024.09.13 22:32:19 INFO  time: compiled rocketchip.cde in 24ms
+2024.09.13 22:32:19 INFO  time: compiled rocketchip.hardfloat in 41ms
+2024.09.13 22:32:19 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:32:19 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:32:19 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:32:19 INFO  time: compiled rocketchip.macros in 12ms
+2024.09.13 22:32:19 INFO  time: compiled rocketchip.hardfloat in 18ms
+2024.09.13 22:32:19 INFO  time: compiled rocketchip.cde in 32ms
+2024.09.13 22:32:19 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:32:19 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:32:19 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:32:19 INFO  time: compiled rocketchip.macros in 10ms
+2024.09.13 22:32:19 INFO  time: compiled rocketchip.hardfloat in 19ms
+2024.09.13 22:32:19 INFO  time: compiled rocketchip.cde in 31ms
+2024.09.13 22:32:27 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:32:27 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:32:27 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:32:27 INFO  time: compiled rocketchip.cde in 11ms
+2024.09.13 22:32:27 INFO  time: compiled rocketchip.hardfloat in 26ms
+2024.09.13 22:32:27 INFO  time: compiled rocketchip.macros in 50ms
+2024.09.13 22:32:27 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:32:27 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:32:27 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:32:27 INFO  time: compiled rocketchip.macros in 15ms
+2024.09.13 22:32:27 INFO  time: compiled rocketchip.hardfloat in 26ms
+2024.09.13 22:32:27 INFO  time: compiled rocketchip.cde in 46ms
+2024.09.13 22:32:30 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:32:30 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:32:30 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:32:30 INFO  time: compiled rocketchip.cde in 12ms
+2024.09.13 22:32:30 INFO  time: compiled rocketchip.hardfloat in 23ms
+2024.09.13 22:32:30 INFO  time: compiled rocketchip.macros in 39ms
+2024.09.13 22:33:04 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:33:04 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:33:04 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:33:04 INFO  time: compiled rocketchip.cde in 23ms
+2024.09.13 22:33:04 INFO  time: compiled rocketchip.macros in 41ms
+2024.09.13 22:33:04 INFO  time: compiled rocketchip.hardfloat in 53ms
+9月 13, 2024 10:33:42 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 6219
+2024.09.13 22:33:56 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:33:56 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:33:56 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:33:56 INFO  time: compiled rocketchip.hardfloat in 16ms
+2024.09.13 22:33:56 INFO  time: compiled rocketchip.cde in 28ms
+2024.09.13 22:33:56 INFO  time: compiled rocketchip.macros in 41ms
+2024.09.13 22:34:11 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:34:11 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:34:11 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:34:11 INFO  time: compiled rocketchip.macros in 11ms
+2024.09.13 22:34:11 INFO  time: compiled rocketchip.hardfloat in 24ms
+2024.09.13 22:34:11 INFO  time: compiled rocketchip.cde in 36ms
+9月 13, 2024 10:34:16 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 6488
+9月 13, 2024 10:34:18 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 6521
+2024.09.13 22:34:19 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:34:19 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:34:19 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:34:19 INFO  time: compiled rocketchip.macros in 11ms
+2024.09.13 22:34:19 INFO  time: compiled rocketchip.hardfloat in 23ms
+2024.09.13 22:34:19 INFO  time: compiled rocketchip.cde in 34ms
+2024.09.13 22:34:55 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:34:55 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:34:55 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:34:55 INFO  time: compiled rocketchip.macros in 12ms
+2024.09.13 22:34:55 INFO  time: compiled rocketchip.hardfloat in 22ms
+2024.09.13 22:34:55 INFO  time: compiled rocketchip.cde in 34ms
+9月 13, 2024 10:35:31 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 6721
+9月 13, 2024 10:35:32 下午 scala.meta.internal.pc.CompilerAccess handleError
+严重: A severe compiler error occurred, full details of the error can be found in the error report /home/focused_xy/cs/ysyx/ysyxSoC/.metals/.reports/metals-full/2024-09-13/r_compiler-error_(ysyxsoc)_22-35-32-127.md
+2024.09.13 22:35:38 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:35:38 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:35:38 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:35:38 INFO  time: compiled rocketchip.hardfloat in 13ms
+2024.09.13 22:35:38 INFO  time: compiled rocketchip.macros in 24ms
+2024.09.13 22:35:38 INFO  time: compiled rocketchip.cde in 38ms
+2024.09.13 22:36:00 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:36:00 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:36:00 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:36:00 INFO  time: compiled rocketchip.cde in 12ms
+2024.09.13 22:36:00 INFO  time: compiled rocketchip.hardfloat in 22ms
+2024.09.13 22:36:00 INFO  time: compiled rocketchip.macros in 32ms
+9月 13, 2024 10:36:07 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 7004
+2024.09.13 22:36:35 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:36:35 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:36:35 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:36:35 INFO  time: compiled rocketchip.hardfloat in 10ms
+2024.09.13 22:36:35 INFO  time: compiled rocketchip.cde in 25ms
+2024.09.13 22:36:35 INFO  time: compiled rocketchip.macros in 36ms
+9月 13, 2024 10:37:39 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 7257
+9月 13, 2024 10:39:10 下午 scala.meta.internal.pc.CompilerAccess handleError
+严重: A severe compiler error occurred, full details of the error can be found in the error report /home/focused_xy/cs/ysyx/ysyxSoC/.metals/.reports/metals-full/2024-09-13/r_compiler-error_(ysyxsoc)_22-39-10-708.md
+9月 13, 2024 10:39:21 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 7900
+2024.09.13 22:39:30 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:39:30 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:39:30 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:39:30 INFO  time: compiled rocketchip.hardfloat in 27ms
+2024.09.13 22:39:30 INFO  time: compiled rocketchip.macros in 37ms
+2024.09.13 22:39:30 INFO  time: compiled rocketchip.cde in 52ms
+2024.09.13 22:39:37 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:39:37 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:39:37 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:39:37 INFO  time: compiled rocketchip.cde in 13ms
+2024.09.13 22:39:37 INFO  time: compiled rocketchip.macros in 0.12s
+2024.09.13 22:39:37 INFO  time: compiled rocketchip.hardfloat in 0.43s
+9月 13, 2024 10:39:41 下午 scala.meta.internal.pc.CompletionProvider expected$1
+警告: offset 2638, count -1, length 3168
+2024.09.13 22:39:43 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:39:43 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:39:43 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:39:43 INFO  time: compiled rocketchip.hardfloat in 26ms
+2024.09.13 22:39:43 INFO  time: compiled rocketchip.cde in 68ms
+2024.09.13 22:39:43 INFO  time: compiled rocketchip.macros in 0.11s
+9月 13, 2024 10:39:47 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 8012
+2024.09.13 22:39:48 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:39:48 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:39:48 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:39:48 INFO  time: compiled rocketchip.cde in 21ms
+2024.09.13 22:39:48 INFO  time: compiled rocketchip.hardfloat in 38ms
+2024.09.13 22:39:48 INFO  time: compiled rocketchip.macros in 53ms
+2024.09.13 22:39:58 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:39:58 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:39:58 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:39:58 INFO  time: compiled rocketchip.cde in 28ms
+2024.09.13 22:39:58 INFO  time: compiled rocketchip.macros in 57ms
+2024.09.13 22:39:58 INFO  time: compiled rocketchip.hardfloat in 69ms
+2024.09.13 22:40:08 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:40:08 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:40:08 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:40:08 INFO  time: compiled rocketchip.cde in 39ms
+2024.09.13 22:40:08 INFO  time: compiled rocketchip.macros in 67ms
+2024.09.13 22:40:08 INFO  time: compiled rocketchip.hardfloat in 90ms
+2024.09.13 22:40:23 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:40:23 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:40:23 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:40:23 INFO  time: compiled rocketchip.hardfloat in 31ms
+2024.09.13 22:40:23 INFO  time: compiled rocketchip.macros in 69ms
+2024.09.13 22:40:23 INFO  time: compiled rocketchip.cde in 86ms
+2024.09.13 22:40:24 WARN  Using indexes to guess the definition of U
+2024.09.13 22:40:24 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:40:24 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:40:24 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:40:24 INFO  time: compiled rocketchip.cde in 23ms
+2024.09.13 22:40:24 INFO  time: compiled rocketchip.hardfloat in 43ms
+2024.09.13 22:40:24 INFO  time: compiled rocketchip.macros in 65ms
+2024.09.13 22:40:26 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:40:26 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:40:26 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:40:26 INFO  time: compiled rocketchip.macros in 12ms
+2024.09.13 22:40:26 INFO  time: compiled rocketchip.hardfloat in 32ms
+2024.09.13 22:40:26 INFO  time: compiled rocketchip.cde in 42ms
+2024.09.13 22:41:04 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:41:04 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:41:04 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:41:04 INFO  time: compiled rocketchip.macros in 13ms
+2024.09.13 22:41:04 INFO  time: compiled rocketchip.hardfloat in 19ms
+2024.09.13 22:41:04 INFO  time: compiled rocketchip.cde in 33ms
+2024.09.13 22:41:11 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:41:11 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:41:11 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:41:11 INFO  time: compiled rocketchip.macros in 46ms
+2024.09.13 22:41:11 INFO  time: compiled rocketchip.cde in 86ms
+2024.09.13 22:41:11 INFO  time: compiled rocketchip.hardfloat in 0.12s
+2024.09.13 22:41:28 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:41:28 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:41:28 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:41:28 INFO  time: compiled rocketchip.macros in 13ms
+2024.09.13 22:41:28 INFO  time: compiled rocketchip.cde in 25ms
+2024.09.13 22:41:28 INFO  time: compiled rocketchip.hardfloat in 35ms
+9月 13, 2024 10:41:36 下午 scala.meta.internal.pc.CompilerAccess handleError
+严重: A severe compiler error occurred, full details of the error can be found in the error report /home/focused_xy/cs/ysyx/ysyxSoC/.metals/.reports/metals-full/2024-09-13/r_compiler-error_(ysyxsoc)_22-41-36-253.md
+2024.09.13 22:41:44 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:41:44 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:41:44 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:41:44 INFO  time: compiled rocketchip.hardfloat in 31ms
+2024.09.13 22:41:44 INFO  time: compiled rocketchip.cde in 48ms
+2024.09.13 22:41:44 INFO  time: compiled rocketchip.macros in 57ms
+9月 13, 2024 10:41:49 下午 scala.meta.internal.pc.CompletionProvider expected$1
+警告: offset 2774, count -1, length 3304
+2024.09.13 22:41:51 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:41:51 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:41:51 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:41:51 INFO  time: compiled rocketchip.macros in 19ms
+2024.09.13 22:41:51 INFO  time: compiled rocketchip.hardfloat in 43ms
+2024.09.13 22:41:51 INFO  time: compiled rocketchip.cde in 58ms
+9月 13, 2024 10:42:16 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 8669
+2024.09.13 22:42:26 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:42:26 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:42:26 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:42:26 INFO  time: compiled rocketchip.macros in 28ms
+2024.09.13 22:42:26 INFO  time: compiled rocketchip.cde in 40ms
+2024.09.13 22:42:26 INFO  time: compiled rocketchip.hardfloat in 54ms
+2024.09.13 22:42:45 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:42:45 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:42:45 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:42:45 INFO  time: compiled rocketchip.macros in 21ms
+2024.09.13 22:42:45 INFO  time: compiled rocketchip.hardfloat in 30ms
+2024.09.13 22:42:45 INFO  time: compiled rocketchip.cde in 51ms
+2024.09.13 22:43:09 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:43:09 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:43:09 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:43:09 INFO  time: compiled rocketchip.cde in 18ms
+2024.09.13 22:43:09 INFO  time: compiled rocketchip.macros in 40ms
+2024.09.13 22:43:09 INFO  time: compiled rocketchip.hardfloat in 55ms
+2024.09.13 22:43:11 WARN  Using indexes to guess the definition of pprot
+9月 13, 2024 10:43:47 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 8948
+2024.09.13 22:43:59 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:43:59 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:43:59 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:43:59 INFO  time: compiled rocketchip.macros in 21ms
+2024.09.13 22:43:59 INFO  time: compiled rocketchip.hardfloat in 31ms
+2024.09.13 22:43:59 INFO  time: compiled rocketchip.cde in 49ms
+2024.09.13 22:43:59 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:43:59 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:43:59 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:43:59 INFO  time: compiled rocketchip.macros in 12ms
+2024.09.13 22:43:59 INFO  time: compiled rocketchip.hardfloat in 23ms
+2024.09.13 22:43:59 INFO  time: compiled rocketchip.cde in 36ms
+2024.09.13 22:44:22 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:44:22 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:44:22 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:44:22 INFO  time: compiled rocketchip.macros in 13ms
+2024.09.13 22:44:22 INFO  time: compiled rocketchip.hardfloat in 27ms
+2024.09.13 22:44:22 INFO  time: compiled rocketchip.cde in 42ms
+9月 13, 2024 10:44:58 下午 scala.meta.internal.pc.CompilerAccess handleError
+严重: A severe compiler error occurred, full details of the error can be found in the error report /home/focused_xy/cs/ysyx/ysyxSoC/.metals/.reports/metals-full/2024-09-13/r_compiler-error_(ysyxsoc)_22-44-58-133.md
+2024.09.13 22:45:11 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:45:11 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:45:11 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:45:11 INFO  time: compiled rocketchip.macros in 11ms
+2024.09.13 22:45:11 INFO  time: compiled rocketchip.cde in 23ms
+2024.09.13 22:45:11 INFO  time: compiled rocketchip.hardfloat in 32ms
+2024.09.13 22:45:35 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:45:35 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:45:35 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:45:35 INFO  time: compiled rocketchip.cde in 20ms
+2024.09.13 22:45:35 INFO  time: compiled rocketchip.hardfloat in 41ms
+2024.09.13 22:45:35 INFO  time: compiled rocketchip.macros in 50ms
+2024.09.13 22:45:47 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:45:47 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:45:47 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:45:47 INFO  time: compiled rocketchip.cde in 18ms
+2024.09.13 22:45:47 INFO  time: compiled rocketchip.hardfloat in 27ms
+2024.09.13 22:45:47 INFO  time: compiled rocketchip.macros in 43ms
+2024.09.13 22:45:56 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:45:56 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:45:56 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:45:56 INFO  time: compiled rocketchip.cde in 10ms
+2024.09.13 22:45:56 INFO  time: compiled rocketchip.hardfloat in 20ms
+2024.09.13 22:45:56 INFO  time: compiled rocketchip.macros in 32ms
+2024.09.13 22:46:52 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:46:52 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:46:52 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:46:52 INFO  time: compiled rocketchip.cde in 12ms
+2024.09.13 22:46:52 INFO  time: compiled rocketchip.hardfloat in 37ms
+2024.09.13 22:46:52 INFO  time: compiled rocketchip.macros in 57ms
+2024.09.13 22:47:00 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:47:00 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:47:00 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:47:00 INFO  time: compiled rocketchip.macros in 20ms
+2024.09.13 22:47:00 INFO  time: compiled rocketchip.hardfloat in 45ms
+2024.09.13 22:47:00 INFO  time: compiled rocketchip.cde in 64ms
+9月 13, 2024 10:47:09 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 9829
+9月 13, 2024 10:47:09 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 9831
+2024.09.13 22:47:21 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:47:21 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:47:21 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:47:21 INFO  time: compiled rocketchip.macros in 13ms
+2024.09.13 22:47:21 INFO  time: compiled rocketchip.hardfloat in 22ms
+2024.09.13 22:47:21 INFO  time: compiled rocketchip.cde in 48ms
+2024.09.13 22:47:27 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:47:27 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:47:27 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:47:27 INFO  time: compiled rocketchip.macros in 20ms
+2024.09.13 22:47:27 INFO  time: compiled rocketchip.hardfloat in 39ms
+2024.09.13 22:47:27 INFO  time: compiled rocketchip.cde in 53ms
+9月 13, 2024 10:47:28 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 10024
+2024.09.13 22:47:44 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:47:44 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:47:44 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:47:44 INFO  time: compiled rocketchip.macros in 14ms
+2024.09.13 22:47:44 INFO  time: compiled rocketchip.hardfloat in 29ms
+2024.09.13 22:47:44 INFO  time: compiled rocketchip.cde in 43ms
+2024.09.13 22:47:52 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:47:52 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:47:52 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:47:52 INFO  time: compiled rocketchip.cde in 25ms
+2024.09.13 22:47:52 INFO  time: compiled rocketchip.macros in 50ms
+2024.09.13 22:47:52 INFO  time: compiled rocketchip.hardfloat in 67ms
+2024.09.13 22:48:22 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:48:22 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:48:22 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:48:22 INFO  time: compiled rocketchip.cde in 12ms
+2024.09.13 22:48:22 INFO  time: compiled rocketchip.hardfloat in 27ms
+2024.09.13 22:48:22 INFO  time: compiled rocketchip.macros in 41ms
+2024.09.13 22:48:49 WARN  Using indexes to guess the definition of prdata
+2024.09.13 22:48:49 WARN  Using indexes to guess the definition of pslverr
+2024.09.13 22:48:49 WARN  Using indexes to guess the definition of pslverr
+2024.09.13 22:48:50 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:48:50 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:48:50 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:48:50 INFO  time: compiled rocketchip.cde in 9ms
+2024.09.13 22:48:50 INFO  time: compiled rocketchip.hardfloat in 29ms
+2024.09.13 22:48:50 INFO  time: compiled rocketchip.macros in 47ms
+2024.09.13 22:48:49 ERROR /home/focused_xy/cs/ysyx/ysyxSoC/src/device/SPI.scala
+scala.meta.internal.tokenizers.package$UnexpectedInputEndException
+	at scala.meta.internal.tokenizers.LegacyScanner.$anonfun$nextToken$1(LegacyScanner.scala:172)
+	at scala.Function0.apply$mcV$sp(Function0.scala:42)
+	at scala.meta.internal.tokenizers.LegacyScanner.scala$meta$internal$tokenizers$LegacyScanner$$nextToken(LegacyScanner.scala:178)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:172)
+	at scala.meta.internal.mtags.ScalaToplevelMtags$XtensionScanner.mtagsNextToken(ScalaToplevelMtags.scala:72)
+	at scala.meta.internal.mtags.ScalaToplevelMtags.loop(ScalaToplevelMtags.scala:500)
+	at scala.meta.internal.mtags.ScalaToplevelMtags.indexRoot(ScalaToplevelMtags.scala:84)
+	at scala.meta.internal.metals.SemanticdbDefinition$.foreachWithReturnMtags(SemanticdbDefinition.scala:81)
+	at scala.meta.internal.metals.Indexer.indexSourceFile(Indexer.scala:595)
+	at scala.meta.internal.metals.Indexer.$anonfun$reindexWorkspaceSources$3(Indexer.scala:693)
+	at scala.meta.internal.metals.Indexer.$anonfun$reindexWorkspaceSources$3$adapted(Indexer.scala:690)
+	at scala.collection.IterableOnceOps.foreach(IterableOnce.scala:619)
+	at scala.collection.IterableOnceOps.foreach$(IterableOnce.scala:617)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1303)
+	at scala.meta.internal.metals.Indexer.reindexWorkspaceSources(Indexer.scala:690)
+	at scala.meta.internal.metals.MetalsLspService.$anonfun$onChange$2(MetalsLspService.scala:952)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:687)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+
+2024.09.13 22:48:50 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:48:50 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:48:50 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:48:50 INFO  time: compiled rocketchip.cde in 25ms
+2024.09.13 22:48:50 INFO  time: compiled rocketchip.macros in 39ms
+2024.09.13 22:48:50 INFO  time: compiled rocketchip.hardfloat in 49ms
+2024.09.13 22:48:51 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:48:51 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:48:51 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:48:51 INFO  time: compiled rocketchip.cde in 20ms
+2024.09.13 22:48:51 INFO  time: compiled rocketchip.macros in 31ms
+2024.09.13 22:48:51 INFO  time: compiled rocketchip.hardfloat in 44ms
+2024.09.13 22:49:06 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:49:06 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:49:06 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:49:06 INFO  time: compiled rocketchip.macros in 9ms
+2024.09.13 22:49:06 INFO  time: compiled rocketchip.hardfloat in 16ms
+2024.09.13 22:49:06 INFO  time: compiled rocketchip.cde in 28ms
+9月 13, 2024 10:49:36 下午 scala.meta.internal.pc.CompilerAccess handleError
+严重: A severe compiler error occurred, full details of the error can be found in the error report /home/focused_xy/cs/ysyx/ysyxSoC/.metals/.reports/metals-full/2024-09-13/r_compiler-error_(ysyxsoc)_22-49-36-672.md
+2024.09.13 22:49:40 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:49:40 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:49:40 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:49:40 INFO  time: compiled rocketchip.macros in 23ms
+2024.09.13 22:49:40 INFO  time: compiled rocketchip.cde in 35ms
+2024.09.13 22:49:40 INFO  time: compiled rocketchip.hardfloat in 62ms
+2024.09.13 22:49:40 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:49:40 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:49:40 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:49:40 INFO  time: compiled rocketchip.macros in 11ms
+2024.09.13 22:49:40 INFO  time: compiled rocketchip.hardfloat in 31ms
+2024.09.13 22:49:41 INFO  time: compiled rocketchip.cde in 42ms
+2024.09.13 22:55:11 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:55:11 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:55:11 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:55:11 INFO  time: compiled rocketchip.macros in 27ms
+2024.09.13 22:55:11 INFO  time: compiled rocketchip.cde in 40ms
+2024.09.13 22:55:11 INFO  time: compiled rocketchip.hardfloat in 50ms
+2024.09.13 22:55:50 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:55:50 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:55:50 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:55:50 INFO  time: compiled rocketchip.hardfloat in 32ms
+2024.09.13 22:55:50 INFO  time: compiled rocketchip.macros in 43ms
+2024.09.13 22:55:50 INFO  time: compiled rocketchip.cde in 58ms
+2024.09.13 22:56:06 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:56:06 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:56:06 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:56:06 INFO  time: compiled rocketchip.macros in 10ms
+2024.09.13 22:56:06 INFO  time: compiled rocketchip.hardfloat in 24ms
+2024.09.13 22:56:06 INFO  time: compiled rocketchip.cde in 40ms
+2024.09.13 22:56:06 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:56:06 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:56:06 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:56:06 INFO  time: compiled rocketchip.cde in 26ms
+2024.09.13 22:56:06 INFO  time: compiled rocketchip.hardfloat in 46ms
+2024.09.13 22:56:06 INFO  time: compiled rocketchip.macros in 61ms
+2024.09.13 22:56:08 WARN  Using indexes to guess the definition of BundleMap
+2024.09.13 22:56:08 WARN  Using indexes to guess the definition of BundleMap
+2024.09.13 22:56:11 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:56:11 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:56:11 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:56:11 INFO  time: compiled rocketchip.macros in 12ms
+2024.09.13 22:56:11 INFO  time: compiled rocketchip.hardfloat in 21ms
+2024.09.13 22:56:11 INFO  time: compiled rocketchip.cde in 35ms
+2024.09.13 22:56:51 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:56:51 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:56:51 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:56:51 INFO  time: compiled rocketchip.macros in 12ms
+2024.09.13 22:56:51 INFO  time: compiled rocketchip.hardfloat in 21ms
+2024.09.13 22:56:51 INFO  time: compiled rocketchip.cde in 33ms
+2024.09.13 22:56:55 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:56:55 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:56:55 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:56:55 INFO  time: compiled rocketchip.cde in 10ms
+2024.09.13 22:56:55 INFO  time: compiled rocketchip.hardfloat in 17ms
+2024.09.13 22:56:55 INFO  time: compiled rocketchip.macros in 30ms
+2024.09.13 22:57:24 WARN  Using indexes to guess the definition of sAccessDivider
+9月 13, 2024 10:57:50 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 11351
+2024.09.13 22:58:21 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:58:21 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:58:21 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:58:21 INFO  time: compiled rocketchip.macros in 25ms
+2024.09.13 22:58:21 INFO  time: compiled rocketchip.cde in 44ms
+2024.09.13 22:58:22 INFO  time: compiled rocketchip.hardfloat in 1.19s
+9月 13, 2024 10:58:56 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 11813
+2024.09.13 22:58:57 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:58:57 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:58:57 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:58:57 INFO  time: compiled rocketchip.hardfloat in 19ms
+2024.09.13 22:58:57 INFO  time: compiled rocketchip.cde in 29ms
+2024.09.13 22:58:57 INFO  time: compiled rocketchip.macros in 37ms
+2024.09.13 22:59:05 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:59:05 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:59:05 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:59:05 INFO  time: compiled rocketchip.macros in 15ms
+2024.09.13 22:59:05 INFO  time: compiled rocketchip.hardfloat in 23ms
+2024.09.13 22:59:05 INFO  time: compiled rocketchip.cde in 39ms
+2024.09.13 22:59:10 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:59:10 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:59:10 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:59:10 INFO  time: compiled rocketchip.cde in 9ms
+2024.09.13 22:59:10 INFO  time: compiled rocketchip.hardfloat in 19ms
+2024.09.13 22:59:10 INFO  time: compiled rocketchip.macros in 28ms
+2024.09.13 22:59:40 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 22:59:40 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 22:59:40 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 22:59:40 INFO  time: compiled rocketchip.macros in 17ms
+2024.09.13 22:59:40 INFO  time: compiled rocketchip.hardfloat in 28ms
+2024.09.13 22:59:40 INFO  time: compiled rocketchip.cde in 59ms
+2024.09.13 23:00:34 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:00:34 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:00:34 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:00:34 INFO  time: compiled rocketchip.macros in 10ms
+2024.09.13 23:00:34 INFO  time: compiled rocketchip.hardfloat in 23ms
+2024.09.13 23:00:34 INFO  time: compiled rocketchip.cde in 36ms
+2024.09.13 23:00:37 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:00:37 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:00:37 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:00:37 INFO  time: compiled rocketchip.hardfloat in 9ms
+2024.09.13 23:00:37 INFO  time: compiled rocketchip.cde in 13ms
+2024.09.13 23:00:37 INFO  time: compiled rocketchip.macros in 25ms
+2024.09.13 23:00:47 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:00:47 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:00:47 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:00:47 INFO  time: compiled rocketchip.macros in 8ms
+2024.09.13 23:00:47 INFO  time: compiled rocketchip.hardfloat in 17ms
+2024.09.13 23:00:47 INFO  time: compiled rocketchip.cde in 35ms
+9月 13, 2024 11:04:53 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 12043
+2024.09.13 23:05:02 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:05:02 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:05:02 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:05:02 INFO  time: compiled rocketchip.hardfloat in 14ms
+2024.09.13 23:05:02 INFO  time: compiled rocketchip.cde in 23ms
+2024.09.13 23:05:02 INFO  time: compiled rocketchip.macros in 32ms
+2024.09.13 23:05:22 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:05:22 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:05:22 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:05:22 INFO  time: compiled rocketchip.cde in 11ms
+2024.09.13 23:05:22 INFO  time: compiled rocketchip.macros in 21ms
+2024.09.13 23:05:22 INFO  time: compiled rocketchip.hardfloat in 30ms
+2024.09.13 23:05:51 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:05:51 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:05:51 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:05:51 INFO  time: compiled rocketchip.macros in 11ms
+2024.09.13 23:05:51 INFO  time: compiled rocketchip.cde in 22ms
+2024.09.13 23:05:51 INFO  time: compiled rocketchip.hardfloat in 32ms
+2024.09.13 23:11:16 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:11:16 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:11:16 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:11:16 INFO  time: compiled rocketchip.macros in 10ms
+2024.09.13 23:11:16 INFO  time: compiled rocketchip.hardfloat in 22ms
+2024.09.13 23:11:16 INFO  time: compiled rocketchip.cde in 30ms
+2024.09.13 23:12:18 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:12:18 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:12:18 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:12:18 INFO  time: compiled rocketchip.macros in 13ms
+2024.09.13 23:12:18 INFO  time: compiled rocketchip.hardfloat in 22ms
+2024.09.13 23:12:18 INFO  time: compiled rocketchip.cde in 31ms
+2024.09.13 23:12:26 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:12:26 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:12:26 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:12:26 INFO  time: compiled rocketchip.macros in 10ms
+2024.09.13 23:12:26 INFO  time: compiled rocketchip.hardfloat in 20ms
+2024.09.13 23:12:26 INFO  time: compiled rocketchip.cde in 30ms
+2024.09.13 23:12:50 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:12:50 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:12:50 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:12:50 INFO  time: compiled rocketchip.cde in 9ms
+2024.09.13 23:12:50 INFO  time: compiled rocketchip.hardfloat in 18ms
+2024.09.13 23:12:50 INFO  time: compiled rocketchip.macros in 29ms
+2024.09.13 23:15:31 INFO  compiling npc (1 scala source)
+2024.09.13 23:15:34 INFO  time: compiled NPC in 2.54s
+2024.09.13 23:18:15 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:18:15 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:18:15 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:18:15 INFO  time: compiled rocketchip.cde in 22ms
+2024.09.13 23:18:15 INFO  time: compiled rocketchip.hardfloat in 30ms
+2024.09.13 23:18:15 INFO  time: compiled rocketchip.macros in 47ms
+2024.09.13 23:21:56 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:21:56 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:21:56 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:21:56 INFO  time: compiled rocketchip.macros in 29ms
+2024.09.13 23:21:56 INFO  time: compiled rocketchip.hardfloat in 38ms
+2024.09.13 23:21:56 INFO  time: compiled rocketchip.cde in 49ms
+9月 13, 2024 11:24:22 下午 scala.meta.internal.pc.CompilerAccess handleError
+严重: A severe compiler error occurred, full details of the error can be found in the error report /home/focused_xy/cs/ysyx/ysyxSoC/.metals/.reports/metals-full/2024-09-13/r_compiler-error_(ysyxsoc)_23-24-22-546.md
+2024.09.13 23:24:22 WARN  Could not find semantic tokens for: file:///home/focused_xy/cs/ysyx/ysyxSoC/src/device/SPI.scala
+2024.09.13 23:24:32 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:24:32 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:24:32 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:24:32 INFO  time: compiled rocketchip.hardfloat in 10ms
+2024.09.13 23:24:32 INFO  time: compiled rocketchip.macros in 20ms
+2024.09.13 23:24:32 INFO  time: compiled rocketchip.cde in 30ms
+2024.09.13 23:26:56 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:26:56 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:26:56 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:26:56 INFO  time: compiled rocketchip.cde in 13ms
+2024.09.13 23:26:56 INFO  time: compiled rocketchip.hardfloat in 28ms
+2024.09.13 23:26:56 INFO  time: compiled rocketchip.macros in 65ms
+2024.09.13 23:26:59 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:26:59 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:26:59 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:26:59 INFO  time: compiled rocketchip.cde in 10ms
+2024.09.13 23:26:59 INFO  time: compiled rocketchip.hardfloat in 20ms
+2024.09.13 23:26:59 INFO  time: compiled rocketchip.macros in 34ms
+2024.09.13 23:27:23 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:27:23 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:27:23 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:27:23 INFO  time: compiled rocketchip.cde in 20ms
+2024.09.13 23:27:23 INFO  time: compiled rocketchip.hardfloat in 34ms
+2024.09.13 23:27:23 INFO  time: compiled rocketchip.macros in 44ms
+9月 13, 2024 11:27:39 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 13703
+2024.09.13 23:27:44 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:27:44 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:27:44 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:27:44 INFO  time: compiled rocketchip.cde in 11ms
+2024.09.13 23:27:44 INFO  time: compiled rocketchip.hardfloat in 48ms
+2024.09.13 23:27:44 INFO  time: compiled rocketchip.macros in 64ms
+2024.09.13 23:27:47 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:27:47 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:27:47 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:27:47 INFO  time: compiled rocketchip.macros in 15ms
+2024.09.13 23:27:47 INFO  time: compiled rocketchip.hardfloat in 32ms
+2024.09.13 23:27:47 INFO  time: compiled rocketchip.cde in 56ms
+2024.09.13 23:28:12 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:28:12 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:28:12 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:28:12 INFO  time: compiled rocketchip.cde in 14ms
+2024.09.13 23:28:12 INFO  time: compiled rocketchip.macros in 35ms
+2024.09.13 23:28:12 INFO  time: compiled rocketchip.hardfloat in 45ms
+2024.09.13 23:28:17 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:28:17 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:28:17 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:28:17 INFO  time: compiled rocketchip.cde in 24ms
+2024.09.13 23:28:17 INFO  time: compiled rocketchip.hardfloat in 58ms
+2024.09.13 23:28:17 INFO  time: compiled rocketchip.macros in 75ms
+2024.09.13 23:31:16 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:31:16 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:31:16 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:31:16 INFO  time: compiled rocketchip.macros in 0.12s
+2024.09.13 23:31:16 INFO  time: compiled rocketchip.cde in 0.27s
+2024.09.13 23:31:16 INFO  time: compiled rocketchip.hardfloat in 0.41s
+2024.09.13 23:31:26 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:31:26 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:31:26 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:31:26 INFO  time: compiled rocketchip.cde in 0.31s
+2024.09.13 23:31:26 INFO  time: compiled rocketchip.hardfloat in 0.57s
+2024.09.13 23:31:26 INFO  time: compiled rocketchip.macros in 0.72s
+2024.09.13 23:31:40 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:31:40 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:31:40 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:31:40 INFO  time: compiled rocketchip.macros in 38ms
+2024.09.13 23:31:40 INFO  time: compiled rocketchip.hardfloat in 52ms
+2024.09.13 23:31:40 INFO  time: compiled rocketchip.cde in 65ms
+2024.09.13 23:31:46 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:31:46 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:31:46 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:31:46 INFO  time: compiled rocketchip.cde in 21ms
+2024.09.13 23:31:46 INFO  time: compiled rocketchip.hardfloat in 57ms
+2024.09.13 23:31:46 INFO  time: compiled rocketchip.macros in 0.11s
+2024.09.13 23:31:53 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:31:53 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:31:53 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:31:53 INFO  time: compiled rocketchip.cde in 52ms
+2024.09.13 23:31:53 INFO  time: compiled rocketchip.hardfloat in 81ms
+2024.09.13 23:31:53 INFO  time: compiled rocketchip.macros in 0.12s
+2024.09.13 23:32:03 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:32:03 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:32:03 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:32:03 INFO  time: compiled rocketchip.macros in 0.24s
+2024.09.13 23:32:03 INFO  time: compiled rocketchip.hardfloat in 0.38s
+2024.09.13 23:32:03 INFO  time: compiled rocketchip.cde in 0.56s
+2024.09.13 23:34:22 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:34:22 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:34:22 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:34:22 INFO  time: compiled rocketchip.macros in 87ms
+2024.09.13 23:34:22 INFO  time: compiled rocketchip.hardfloat in 0.13s
+2024.09.13 23:34:22 INFO  time: compiled rocketchip.cde in 0.22s
+2024.09.13 23:34:27 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:34:27 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:34:27 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:34:27 INFO  time: compiled rocketchip.cde in 57ms
+2024.09.13 23:34:27 INFO  time: compiled rocketchip.hardfloat in 94ms
+2024.09.13 23:34:27 INFO  time: compiled rocketchip.macros in 0.13s
+9月 13, 2024 11:35:09 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 14517
+2024.09.13 23:35:22 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:35:22 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:35:22 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:35:22 INFO  time: compiled rocketchip.cde in 33ms
+2024.09.13 23:35:22 INFO  time: compiled rocketchip.hardfloat in 53ms
+2024.09.13 23:35:22 INFO  time: compiled rocketchip.macros in 77ms
+9月 13, 2024 11:35:23 下午 scala.meta.internal.pc.MetalsGlobal inverseSemanticdbSymbols
+严重: invalid SemanticDB symbol: ysyx/APBSPI#Impl#isWaitData.
+-1 is out of bounds (min 0, max 2)
+9月 13, 2024 11:35:23 下午 scala.meta.internal.pc.CompilerAccess handleError
+严重: A severe compiler error occurred, full details of the error can be found in the error report /home/focused_xy/cs/ysyx/ysyxSoC/.metals/.reports/metals-full/2024-09-13/r_compiler-error_(ysyxsoc)_23-35-23-583.md
+2024.09.13 23:35:34 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:35:34 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:35:34 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:35:34 INFO  time: compiled rocketchip.macros in 19ms
+2024.09.13 23:35:34 INFO  time: compiled rocketchip.hardfloat in 34ms
+2024.09.13 23:35:34 INFO  time: compiled rocketchip.cde in 62ms
+2024.09.13 23:36:02 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:36:02 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:36:02 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:36:02 INFO  time: compiled rocketchip.cde in 46ms
+2024.09.13 23:36:02 INFO  time: compiled rocketchip.hardfloat in 88ms
+2024.09.13 23:36:02 INFO  time: compiled rocketchip.macros in 0.14s
+2024.09.13 23:36:07 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:36:07 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:36:07 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:36:07 INFO  time: compiled rocketchip.cde in 72ms
+2024.09.13 23:36:07 INFO  time: compiled rocketchip.hardfloat in 0.12s
+2024.09.13 23:36:07 INFO  time: compiled rocketchip.macros in 0.2s
+2024.09.13 23:36:51 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:36:51 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:36:51 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:36:51 INFO  time: compiled rocketchip.hardfloat in 0.1s
+2024.09.13 23:36:51 INFO  time: compiled rocketchip.macros in 0.16s
+9月 13, 2024 11:36:51 下午 scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+信息: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+2024.09.13 23:36:51 INFO  time: compiled rocketchip.cde in 0.21s
+2024.09.13 23:37:04 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:37:04 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:37:04 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:37:04 INFO  time: compiled rocketchip.hardfloat in 67ms
+2024.09.13 23:37:04 INFO  time: compiled rocketchip.cde in 0.12s
+2024.09.13 23:37:04 INFO  time: compiled rocketchip.macros in 0.16s
+2024.09.13 23:37:09 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:37:09 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:37:09 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:37:09 INFO  time: compiled rocketchip.cde in 80ms
+2024.09.13 23:37:09 INFO  time: compiled rocketchip.hardfloat in 0.14s
+2024.09.13 23:37:09 INFO  time: compiled rocketchip.macros in 0.2s
+2024.09.13 23:37:14 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:37:14 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:37:14 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:37:14 INFO  time: compiled rocketchip.cde in 76ms
+2024.09.13 23:37:14 INFO  time: compiled rocketchip.hardfloat in 0.14s
+2024.09.13 23:37:14 INFO  time: compiled rocketchip.macros in 0.21s
+2024.09.13 23:37:21 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:37:21 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:37:21 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:37:21 INFO  time: compiled rocketchip.hardfloat in 0.12s
+2024.09.13 23:37:21 INFO  time: compiled rocketchip.macros in 0.2s
+2024.09.13 23:37:21 INFO  time: compiled rocketchip.cde in 0.28s
+2024.09.13 23:37:27 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:37:27 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:37:27 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:37:27 INFO  time: compiled rocketchip.macros in 0.21s
+2024.09.13 23:37:27 INFO  time: compiled rocketchip.hardfloat in 0.43s
+2024.09.13 23:37:27 INFO  time: compiled rocketchip.cde in 0.8s
+2024.09.13 23:37:32 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:37:32 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:37:32 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:37:32 INFO  time: compiled rocketchip.macros in 69ms
+2024.09.13 23:37:32 INFO  time: compiled rocketchip.hardfloat in 0.11s
+2024.09.13 23:37:32 INFO  time: compiled rocketchip.cde in 0.15s
+9月 13, 2024 11:37:47 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 15177
+9月 13, 2024 11:37:47 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 15176
+2024.09.13 23:37:50 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:37:50 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:37:50 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:37:50 INFO  time: compiled rocketchip.cde in 71ms
+2024.09.13 23:37:50 INFO  time: compiled rocketchip.hardfloat in 93ms
+2024.09.13 23:37:50 INFO  time: compiled rocketchip.macros in 0.13s
+2024.09.13 23:41:41 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:41:41 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:41:41 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:41:41 INFO  time: compiled rocketchip.cde in 16ms
+2024.09.13 23:41:41 INFO  time: compiled rocketchip.macros in 25ms
+2024.09.13 23:41:41 INFO  time: compiled rocketchip.hardfloat in 38ms
+2024.09.13 23:41:43 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:41:43 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:41:43 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:41:43 INFO  time: compiled rocketchip.macros in 10ms
+2024.09.13 23:41:43 INFO  time: compiled rocketchip.hardfloat in 20ms
+2024.09.13 23:41:43 INFO  time: compiled rocketchip.cde in 34ms
+2024.09.13 23:44:06 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:44:06 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:44:06 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:44:06 INFO  time: compiled rocketchip.macros in 16ms
+2024.09.13 23:44:06 INFO  time: compiled rocketchip.cde in 28ms
+2024.09.13 23:44:06 INFO  time: compiled rocketchip.hardfloat in 42ms
+2024.09.13 23:45:03 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:45:03 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:45:03 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:45:03 INFO  time: compiled rocketchip.macros in 15ms
+2024.09.13 23:45:03 INFO  time: compiled rocketchip.hardfloat in 24ms
+2024.09.13 23:45:03 INFO  time: compiled rocketchip.cde in 36ms
+2024.09.13 23:45:25 WARN  Using indexes to guess the definition of SPIReq
+2024.09.13 23:45:29 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:45:29 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:45:29 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:45:29 INFO  time: compiled rocketchip.macros in 11ms
+2024.09.13 23:45:29 INFO  time: compiled rocketchip.hardfloat in 19ms
+2024.09.13 23:45:29 INFO  time: compiled rocketchip.cde in 29ms
+2024.09.13 23:46:15 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:46:15 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:46:15 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:46:15 INFO  time: compiled rocketchip.macros in 8ms
+2024.09.13 23:46:15 INFO  time: compiled rocketchip.cde in 19ms
+2024.09.13 23:46:15 INFO  time: compiled rocketchip.hardfloat in 34ms
+2024.09.13 23:46:17 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:46:17 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:46:17 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:46:17 INFO  time: compiled rocketchip.cde in 10ms
+2024.09.13 23:46:17 INFO  time: compiled rocketchip.hardfloat in 12ms
+2024.09.13 23:46:17 INFO  time: compiled rocketchip.macros in 24ms
+9月 13, 2024 11:47:15 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 15975
+2024.09.13 23:47:19 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:47:19 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:47:19 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:47:19 INFO  time: compiled rocketchip.hardfloat in 15ms
+2024.09.13 23:47:19 INFO  time: compiled rocketchip.macros in 22ms
+2024.09.13 23:47:19 INFO  time: compiled rocketchip.cde in 33ms
+2024.09.13 23:48:14 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:48:14 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:48:14 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:48:14 INFO  time: compiled rocketchip.cde in 10ms
+2024.09.13 23:48:14 INFO  time: compiled rocketchip.hardfloat in 21ms
+2024.09.13 23:48:14 INFO  time: compiled rocketchip.macros in 34ms
+2024.09.13 23:49:38 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:49:38 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:49:38 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:49:38 INFO  time: compiled rocketchip.macros in 16ms
+2024.09.13 23:49:38 INFO  time: compiled rocketchip.cde in 24ms
+2024.09.13 23:49:38 INFO  time: compiled rocketchip.hardfloat in 32ms
+2024.09.13 23:49:47 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:49:47 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:49:47 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:49:47 INFO  time: compiled rocketchip.macros in 11ms
+2024.09.13 23:49:47 INFO  time: compiled rocketchip.cde in 64ms
+2024.09.13 23:49:47 INFO  time: compiled rocketchip.hardfloat in 81ms
+2024.09.13 23:49:49 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:49:49 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:49:49 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:49:49 INFO  time: compiled rocketchip.macros in 9ms
+2024.09.13 23:49:49 INFO  time: compiled rocketchip.hardfloat in 19ms
+2024.09.13 23:49:49 INFO  time: compiled rocketchip.cde in 30ms
+2024.09.13 23:50:47 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:50:47 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:50:47 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:50:47 INFO  time: compiled rocketchip.cde in 13ms
+2024.09.13 23:50:47 INFO  time: compiled rocketchip.hardfloat in 26ms
+2024.09.13 23:50:47 INFO  time: compiled rocketchip.macros in 36ms
+2024.09.13 23:51:21 WARN  Using indexes to guess the definition of SPIReq
+2024.09.13 23:51:21 WARN  Using indexes to guess the definition of SPIReq
+2024.09.13 23:51:24 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:51:24 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:51:24 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:51:24 INFO  time: compiled rocketchip.macros in 9ms
+2024.09.13 23:51:24 INFO  time: compiled rocketchip.cde in 17ms
+2024.09.13 23:51:24 INFO  time: compiled rocketchip.hardfloat in 26ms
+2024.09.13 23:51:29 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:51:29 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:51:29 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:51:29 INFO  time: compiled rocketchip.hardfloat in 11ms
+2024.09.13 23:51:29 INFO  time: compiled rocketchip.cde in 22ms
+2024.09.13 23:51:29 INFO  time: compiled rocketchip.macros in 0.12s
+9月 13, 2024 11:51:38 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 16475
+2024.09.13 23:52:32 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.13 23:52:32 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.13 23:52:32 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.13 23:52:32 INFO  time: compiled rocketchip.macros in 60ms
+2024.09.13 23:52:32 INFO  time: compiled rocketchip.cde in 0.11s
+2024.09.13 23:52:32 INFO  time: compiled rocketchip.hardfloat in 0.14s
+2024.09.13 23:54:32 INFO  Shutting down server
+2024.09.13 23:54:32 INFO  shutting down Metals
+2024.09.13 23:54:32 INFO  Shut down connection with build server.
+2024.09.13 23:54:32 INFO  Shut down connection with build server.
+2024.09.13 23:54:32 INFO  Exiting server
+2024.09.14 08:00:59 INFO  Started: Metals version 1.3.5 in folders '/home/focused_xy/cs/ysyx/npc, /home/focused_xy/cs/ysyx/ysyxSoC' for client Visual Studio Code 1.93.1.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@1bb31a40]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@688a9adc]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@1bb31a40]
+2024.09.14 08:00:59 INFO  Flyway Community Edition 9.22.3 by Redgate
+2024.09.14 08:00:59 INFO  See release notes here: https://rd.gt/416ObMi
+2024.09.14 08:00:59 INFO  
+2024.09.14 08:00:59 INFO  Database: jdbc:h2:file:/home/focused_xy/cs/ysyx/ysyxSoC/.metals/metals (H2 2.3)
+2024.09.14 08:00:59 WARN  Flyway upgrade recommended: H2 2.3.230 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.09.14 08:00:59 INFO  Successfully validated 6 migrations (execution time 00:00.021s)
+2024.09.14 08:00:59 INFO  Current version of schema "PUBLIC": 6
+2024.09.14 08:00:59 INFO  Schema "PUBLIC" is up to date. No migration necessary.
+2024.09.14 08:01:00 INFO  Attempting to connect to the build server...
+2024.09.14 08:01:00 INFO  Database: jdbc:h2:file:/home/focused_xy/cs/ysyx/npc/.metals/metals (H2 2.3)
+2024.09.14 08:01:00 WARN  Flyway upgrade recommended: H2 2.3.230 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.09.14 08:01:00 INFO  Successfully validated 6 migrations (execution time 00:00.008s)
+2024.09.14 08:01:00 INFO  Current version of schema "PUBLIC": 6
+2024.09.14 08:01:00 INFO  no build target found for /home/focused_xy/cs/ysyx/ysyxSoC/src/device/SPI.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.09.14 08:01:00 INFO  Schema "PUBLIC" is up to date. No migration necessary.
+2024.09.14 08:01:00 INFO  Attempting to connect to the build server...
+DanglingParentheses: top-level presets deprecated; use 'preset' subsection
+2024.09.14 08:01:03 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/focused_xy/cs/ysyx/npc/.metals/bsp.trace.json or /home/focused_xy/.cache/metals/bsp.trace.json
+2024.09.14 08:01:03 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/focused_xy/cs/ysyx/ysyxSoC/.metals/bsp.trace.json or /home/focused_xy/.cache/metals/bsp.trace.json
+2024.09.14 08:01:03 INFO  time: Connected to build server in 3.49s
+2024.09.14 08:01:03 INFO  Connected to Build server: Bloop v1.6.0
+2024.09.14 08:01:03 INFO  time: Imported build in 0.13s
+2024.09.14 08:01:03 INFO  running doctor check
+2024.09.14 08:01:03 INFO  java targets: NPC, NPC.test, mill-build-
+2024.09.14 08:01:05 INFO  time: Connected to build server in 5.4s
+2024.09.14 08:01:05 INFO  Connected to Build server: Bloop v1.6.0
+2024.09.14 08:01:05 INFO  running doctor check
+2024.09.14 08:01:05 INFO  java targets: rocketchip.hardfloat, ysyxsoc, rocketchip, rocketchip.cde, rocketchip.macros, mill-build-
+2024.09.14 08:01:05 WARN  2.13.10 is no longer supported in the current Metals versions, using the last known supported version 1.3.3
+2024.09.14 08:01:05 INFO  Database: jdbc:h2:file:/home/focused_xy/.metals/metals (H2 2.3)
+2024.09.14 08:01:05 WARN  Flyway upgrade recommended: H2 2.3.230 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.09.14 08:01:05 INFO  Successfully validated 1 migration (execution time 00:00.002s)
+2024.09.14 08:01:05 INFO  Current version of schema "PUBLIC": 1
+2024.09.14 08:01:05 INFO  Schema "PUBLIC" is up to date. No migration necessary.
+2024.09.14 08:01:05 INFO  time: indexed workspace in 2.65s
+2024.09.14 08:01:05 WARN  no build target for: /home/focused_xy/cs/ysyx/ysyxSoC/src/device/SPI.scala
+2024.09.14 08:01:09 INFO  Database: jdbc:h2:file:/home/focused_xy/.metals/metals (H2 2.3)
+2024.09.14 08:01:09 WARN  Flyway upgrade recommended: H2 2.3.230 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.09.14 08:01:09 INFO  Successfully validated 1 migration (execution time 00:00.001s)
+2024.09.14 08:01:09 INFO  Current version of schema "PUBLIC": 1
+2024.09.14 08:01:09 INFO  Schema "PUBLIC" is up to date. No migration necessary.
+2024.09.14 08:01:09 INFO  time: indexed workspace in 3.7s
+2024.09.14 08:01:14 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.14 08:01:14 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.14 08:01:14 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.14 08:01:14 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:01:14 INFO  time: compiled rocketchip.cde in 0.65s
+2024.09.14 08:01:14 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:01:14 INFO  time: compiled rocketchip.hardfloat in 0.7s
+2024.09.14 08:01:14 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:01:14 INFO  time: compiled rocketchip.macros in 0.76s
+2024.09.14 08:01:14 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.14 08:01:14 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.14 08:01:14 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.14 08:01:14 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:01:14 INFO  time: compiled rocketchip.macros in 96ms
+2024.09.14 08:01:14 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:01:14 INFO  time: compiled rocketchip.hardfloat in 0.17s
+2024.09.14 08:01:15 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:01:15 INFO  time: compiled rocketchip.cde in 0.27s
+9月 14, 2024 8:07:55 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 61
+2024.09.14 08:07:57 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.14 08:07:57 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.14 08:07:57 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.14 08:07:57 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:07:57 INFO  time: compiled rocketchip.cde in 62ms
+2024.09.14 08:07:57 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:07:57 INFO  time: compiled rocketchip.hardfloat in 0.11s
+2024.09.14 08:07:57 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:07:57 INFO  time: compiled rocketchip.macros in 0.15s
+2024.09.14 08:09:09 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.14 08:09:09 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.14 08:09:09 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.14 08:09:09 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:09:09 INFO  time: compiled rocketchip.macros in 35ms
+2024.09.14 08:09:09 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:09:09 INFO  time: compiled rocketchip.hardfloat in 57ms
+2024.09.14 08:09:09 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:09:09 INFO  time: compiled rocketchip.cde in 90ms
+2024.09.14 08:14:21 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.14 08:14:21 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.14 08:14:21 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.14 08:14:21 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:14:21 INFO  time: compiled rocketchip.macros in 30ms
+2024.09.14 08:14:21 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:14:21 INFO  time: compiled rocketchip.hardfloat in 51ms
+2024.09.14 08:14:21 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:14:21 INFO  time: compiled rocketchip.cde in 76ms
+9月 14, 2024 8:18:23 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 232
+9月 14, 2024 8:18:24 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 236
+2024.09.14 08:19:37 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.14 08:19:37 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.14 08:19:37 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.14 08:19:37 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:19:37 INFO  time: compiled rocketchip.cde in 33ms
+2024.09.14 08:19:37 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:19:37 INFO  time: compiled rocketchip.hardfloat in 63ms
+2024.09.14 08:19:37 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:19:37 INFO  time: compiled rocketchip.macros in 87ms
+2024.09.14 08:21:06 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.14 08:21:06 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.14 08:21:06 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.14 08:21:06 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:21:06 INFO  time: compiled rocketchip.cde in 27ms
+2024.09.14 08:21:06 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:21:06 INFO  time: compiled rocketchip.hardfloat in 56ms
+2024.09.14 08:21:06 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:21:06 INFO  time: compiled rocketchip.macros in 76ms
+2024.09.14 08:21:58 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.14 08:21:58 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.14 08:21:58 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.14 08:21:58 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:21:58 INFO  time: compiled rocketchip.cde in 36ms
+2024.09.14 08:21:58 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:21:58 INFO  time: compiled rocketchip.hardfloat in 58ms
+2024.09.14 08:21:58 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:21:58 INFO  time: compiled rocketchip.macros in 99ms
+2024.09.14 08:22:31 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.14 08:22:31 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.14 08:22:31 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.14 08:22:31 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:22:31 INFO  time: compiled rocketchip.macros in 23ms
+2024.09.14 08:22:31 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:22:31 INFO  time: compiled rocketchip.hardfloat in 45ms
+2024.09.14 08:22:31 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:22:31 INFO  time: compiled rocketchip.cde in 70ms
+9月 14, 2024 8:23:44 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 718
+2024.09.14 08:24:44 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.14 08:24:44 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.14 08:24:44 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.14 08:24:44 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:24:44 INFO  time: compiled rocketchip.hardfloat in 29ms
+2024.09.14 08:24:44 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:24:44 INFO  time: compiled rocketchip.macros in 55ms
+2024.09.14 08:24:44 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:24:44 INFO  time: compiled rocketchip.cde in 71ms
+2024.09.14 08:25:11 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.14 08:25:11 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.14 08:25:11 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.14 08:25:11 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:25:11 INFO  time: compiled rocketchip.macros in 21ms
+2024.09.14 08:25:11 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:25:11 INFO  time: compiled rocketchip.hardfloat in 41ms
+2024.09.14 08:25:11 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:25:11 INFO  time: compiled rocketchip.cde in 60ms
+9月 14, 2024 8:26:41 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 1287
+9月 14, 2024 8:27:00 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 1476
+2024.09.14 08:27:16 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.14 08:27:16 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.14 08:27:16 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.14 08:27:16 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:27:16 INFO  time: compiled rocketchip.cde in 21ms
+2024.09.14 08:27:16 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:27:16 INFO  time: compiled rocketchip.hardfloat in 37ms
+2024.09.14 08:27:16 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:27:16 INFO  time: compiled rocketchip.macros in 54ms
+2024.09.14 08:30:52 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.14 08:30:52 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.14 08:30:52 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.14 08:30:52 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:30:52 INFO  time: compiled rocketchip.cde in 28ms
+2024.09.14 08:30:52 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:30:52 INFO  time: compiled rocketchip.hardfloat in 54ms
+2024.09.14 08:30:52 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 08:30:52 INFO  time: compiled rocketchip.macros in 78ms
+2024.09.14 08:38:40 INFO  compiling npc (22 scala sources)
+2024.09.14 08:38:54 INFO  time: compiled NPC in 14s
+2024.09.14 09:04:43 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.14 09:04:43 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.14 09:04:43 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.14 09:04:43 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 09:04:43 INFO  time: compiled rocketchip.cde in 0.13s
+2024.09.14 09:04:43 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 09:04:43 INFO  time: compiled rocketchip.macros in 0.2s
+2024.09.14 09:04:43 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 09:04:43 INFO  time: compiled rocketchip.hardfloat in 0.27s
+2024.09.14 09:04:53 WARN  Using indexes to guess the definition of enable
+2024.09.14 09:04:55 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.14 09:04:55 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.14 09:04:55 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.14 09:04:55 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 09:04:55 INFO  time: compiled rocketchip.cde in 57ms
+2024.09.14 09:04:55 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 09:04:55 INFO  time: compiled rocketchip.hardfloat in 86ms
+2024.09.14 09:04:55 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 09:04:55 INFO  time: compiled rocketchip.macros in 0.12s
+2024.09.14 09:08:20 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.14 09:08:20 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.14 09:08:20 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.14 09:08:20 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 09:08:20 INFO  time: compiled rocketchip.macros in 41ms
+2024.09.14 09:08:20 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 09:08:20 INFO  time: compiled rocketchip.hardfloat in 0.25s
+2024.09.14 09:08:20 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 09:08:20 INFO  time: compiled rocketchip.cde in 0.28s
+2024.09.14 09:10:21 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.14 09:10:21 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.14 09:10:21 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.14 09:10:21 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 09:10:21 INFO  time: compiled rocketchip.cde in 54ms
+2024.09.14 09:10:21 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 09:10:21 INFO  time: compiled rocketchip.hardfloat in 88ms
+2024.09.14 09:10:21 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 09:10:21 INFO  time: compiled rocketchip.macros in 0.12s
+2024.09.14 09:13:47 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.14 09:13:47 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.14 09:13:47 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.14 09:13:47 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 09:13:47 INFO  time: compiled rocketchip.macros in 41ms
+2024.09.14 09:13:47 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 09:13:47 INFO  time: compiled rocketchip.cde in 58ms
+2024.09.14 09:13:47 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 09:13:47 INFO  time: compiled rocketchip.hardfloat in 83ms
+2024.09.14 09:18:06 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.14 09:18:06 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.14 09:18:06 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.14 09:18:06 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 09:18:06 INFO  time: compiled rocketchip.macros in 49ms
+2024.09.14 09:18:06 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 09:18:06 INFO  time: compiled rocketchip.hardfloat in 94ms
+2024.09.14 09:18:06 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 09:18:06 INFO  time: compiled rocketchip.cde in 0.13s
+2024.09.14 09:18:27 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.14 09:18:27 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.14 09:18:27 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.14 09:18:27 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 09:18:27 INFO  time: compiled rocketchip.macros in 30ms
+2024.09.14 09:18:27 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 09:18:27 INFO  time: compiled rocketchip.hardfloat in 48ms
+2024.09.14 09:18:27 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 09:18:27 INFO  time: compiled rocketchip.cde in 68ms
+2024.09.14 09:22:48 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.14 09:22:48 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.14 09:22:48 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.14 09:22:48 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 09:22:48 INFO  time: compiled rocketchip.macros in 54ms
+2024.09.14 09:22:48 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 09:22:48 INFO  time: compiled rocketchip.cde in 80ms
+2024.09.14 09:22:48 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 09:22:48 INFO  time: compiled rocketchip.hardfloat in 0.1s
+2024.09.14 10:07:24 INFO  compiling npc (1 scala source)
+2024.09.14 10:07:27 INFO  time: compiled NPC in 2.74s
+2024.09.14 10:07:27 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:07:30 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:07:31 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:07:33 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:07:34 INFO  compiling npc (1 scala source)
+2024.09.14 10:07:34 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:07:35 INFO  time: compiled NPC in 1.02s
+2024.09.14 10:07:45 INFO  compiling npc (1 scala source)
+2024.09.14 10:07:45 INFO  time: compiled NPC in 0.94s
+9月 14, 2024 10:07:55 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 2881
+2024.09.14 10:08:00 INFO  compiling npc (1 scala source)
+2024.09.14 10:08:00 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:08:00 INFO  time: compiled NPC in 0.64s
+2024.09.14 10:11:20 INFO  compiling npc (1 scala source)
+2024.09.14 10:11:20 INFO  time: compiled NPC in 0.59s
+2024.09.14 10:15:01 WARN  Using indexes to guess the definition of AXI4Delayer
+2024.09.14 10:15:01 WARN  Using indexes to guess the definition of xbar
+2024.09.14 10:15:01 WARN  Using indexes to guess the definition of xbar
+2024.09.14 10:15:02 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.14 10:15:02 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.14 10:15:02 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.14 10:15:02 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 10:15:02 INFO  time: compiled rocketchip.macros in 32ms
+2024.09.14 10:15:02 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 10:15:02 INFO  time: compiled rocketchip.cde in 55ms
+2024.09.14 10:15:02 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 10:15:02 INFO  time: compiled rocketchip.hardfloat in 70ms
+2024.09.14 10:15:15 WARN  Using indexes to guess the definition of AXI4Xbar
+2024.09.14 10:15:15 WARN  Using indexes to guess the definition of AXI4Xbar
+2024.09.14 10:15:47 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.14 10:15:47 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.14 10:15:47 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.14 10:15:47 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 10:15:47 INFO  time: compiled rocketchip.macros in 15ms
+2024.09.14 10:15:47 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 10:15:47 INFO  time: compiled rocketchip.cde in 35ms
+2024.09.14 10:15:47 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 10:15:47 INFO  time: compiled rocketchip.hardfloat in 69ms
+2024.09.14 10:18:25 INFO  compiling npc (1 scala source)
+2024.09.14 10:18:25 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:18:25 INFO  time: compiled NPC in 0.64s
+2024.09.14 10:18:54 INFO  compiling npc (1 scala source)
+2024.09.14 10:18:54 INFO  time: compiled NPC in 0.82s
+2024.09.14 10:18:58 INFO  compiling npc (1 scala source)
+2024.09.14 10:18:59 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:18:58 INFO  time: compiled NPC in 0.53s
+9月 14, 2024 10:21:03 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 3788
+2024.09.14 10:21:05 INFO  compiling npc (1 scala source)
+2024.09.14 10:21:05 INFO  time: compiled NPC in 0.71s
+9月 14, 2024 10:21:23 上午 scala.meta.internal.pc.CompilerAccess handleError
+严重: A severe compiler error occurred, full details of the error can be found in the error report /home/focused_xy/cs/ysyx/npc/.metals/.reports/metals-full/2024-09-14/r_compiler-error_(NPC)_10-21-23-127.md
+9月 14, 2024 10:21:23 上午 scala.meta.internal.pc.CompilerAccess handleError
+严重: A severe compiler error occurred, full details of the error can be found in the error report /home/focused_xy/cs/ysyx/npc/.metals/.reports/metals-full/2024-09-14/r_compiler-error_(NPC)_10-21-23-129.md
+2024.09.14 10:21:40 INFO  compiling npc (1 scala source)
+2024.09.14 10:21:41 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:21:40 INFO  time: compiled NPC in 0.56s
+2024.09.14 10:23:30 WARN  Could not find semantic tokens for: file:///home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:23:40 INFO  compiling npc (1 scala source)
+2024.09.14 10:23:40 INFO  time: compiled NPC in 0.66s
+9月 14, 2024 10:25:45 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 4225
+2024.09.14 10:25:53 INFO  compiling npc (1 scala source)
+2024.09.14 10:25:53 INFO  time: compiled NPC in 0.49s
+2024.09.14 10:30:03 INFO  compiling npc (1 scala source)
+2024.09.14 10:30:03 INFO  time: compiled NPC in 0.43s
+2024.09.14 10:31:55 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:31:55 INFO  compiling npc (1 scala source)
+2024.09.14 10:31:56 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:31:55 INFO  time: compiled NPC in 0.37s
+2024.09.14 10:31:57 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:31:58 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:00 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+9月 14, 2024 10:32:01 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 4394
+2024.09.14 10:32:01 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:02 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:03 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:05 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:07 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:08 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:09 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:11 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+9月 14, 2024 10:32:11 上午 scala.meta.internal.pc.CompilerAccess handleError
+严重: A severe compiler error occurred, full details of the error can be found in the error report /home/focused_xy/cs/ysyx/npc/.metals/.reports/metals-full/2024-09-14/r_compiler-error_(NPC)_10-32-11-509.md
+2024.09.14 10:32:11 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:14 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:16 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:16 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:16 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:17 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:18 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:20 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:21 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:22 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:22 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:23 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:24 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:28 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:28 INFO  compiling npc (1 scala source)
+2024.09.14 10:32:28 INFO  time: compiled NPC in 0.15s
+2024.09.14 10:32:28 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:32 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:33 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:51 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:52 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:53 INFO  compiling npc (1 scala source)
+2024.09.14 10:32:53 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:32:53 INFO  time: compiled NPC in 0.85s
+2024.09.14 10:33:02 INFO  compiling npc (1 scala source)
+2024.09.14 10:33:02 INFO  time: compiled NPC in 0.15s
+2024.09.14 10:33:05 INFO  compiling npc (1 scala source)
+2024.09.14 10:33:05 INFO  time: compiled NPC in 0.54s
+9月 14, 2024 10:33:13 上午 scala.meta.internal.pc.MetalsGlobal inverseSemanticdbSymbols
+严重: invalid SemanticDB symbol: rvcpu/core/IFU#isFetch.
+illegal cyclic reference involving class IFU
+2024.09.14 10:33:14 INFO  compiling npc (1 scala source)
+2024.09.14 10:33:14 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:33:14 INFO  time: compiled NPC in 0.56s
+9月 14, 2024 10:33:23 上午 scala.meta.internal.pc.CompilerAccess handleError
+严重: A severe compiler error occurred, full details of the error can be found in the error report /home/focused_xy/cs/ysyx/npc/.metals/.reports/metals-full/2024-09-14/r_compiler-error_(NPC)_10-33-23-608.md
+2024.09.14 10:33:32 INFO  compiling npc (1 scala source)
+2024.09.14 10:33:32 INFO  time: compiled NPC in 0.54s
+9月 14, 2024 10:34:30 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 5177
+2024.09.14 10:34:34 INFO  compiling npc (1 scala source)
+2024.09.14 10:34:34 INFO  time: compiled NPC in 0.13s
+2024.09.14 10:34:34 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:34:38 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:34:38 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:34:39 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:34:40 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:34:40 INFO  compiling npc (1 scala source)
+2024.09.14 10:34:41 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:34:40 INFO  time: compiled NPC in 0.61s
+2024.09.14 10:34:44 INFO  compiling npc (1 scala source)
+2024.09.14 10:34:44 INFO  time: compiled NPC in 0.71s
+9月 14, 2024 10:35:06 上午 scala.meta.internal.pc.CompilerAccess handleError
+严重: -1 is out of bounds (min 0, max 2)
+java.lang.IndexOutOfBoundsException: -1 is out of bounds (min 0, max 2)
+	at scala.collection.mutable.ArrayBuffer.apply(ArrayBuffer.scala:102)
+	at scala.reflect.internal.Types$Type.findMemberInternal$1(Types.scala:1030)
+	at scala.reflect.internal.Types$Type.findMember(Types.scala:1035)
+	at scala.reflect.internal.Types$Type.memberBasedOnName(Types.scala:661)
+	at scala.reflect.internal.Types$Type.member(Types.scala:625)
+	at scala.reflect.internal.Types$Type.packageObject(Types.scala:637)
+	at scala.reflect.internal.tpe.TypeMaps$AsSeenFromMap.<init>(TypeMaps.scala:419)
+	at scala.reflect.internal.Types$Type.asSeenFrom(Types.scala:692)
+	at scala.reflect.internal.Types$Type.computeMemberType(Types.scala:728)
+	at scala.reflect.internal.Types$Type.memberType(Types.scala:721)
+	at scala.tools.nsc.typechecker.Implicits$ImplicitInfo.tpe(Implicits.scala:246)
+	at scala.tools.nsc.typechecker.Implicits$ImplicitInfo.computeErroneous(Implicits.scala:281)
+	at scala.tools.nsc.typechecker.Implicits$ImplicitInfo.isCyclicOrErroneous(Implicits.scala:276)
+	at scala.tools.nsc.typechecker.Implicits$ImplicitSearch$ImplicitComputation.isIneligible(Implicits.scala:1042)
+	at scala.tools.nsc.typechecker.Implicits$ImplicitSearch$ImplicitComputation.survives(Implicits.scala:1051)
+	at scala.tools.nsc.typechecker.Implicits$ImplicitSearch$ImplicitComputation.eligibleNew(Implicits.scala:1131)
+	at scala.tools.nsc.typechecker.Implicits$ImplicitSearch$ImplicitComputation.<init>(Implicits.scala:1185)
+	at scala.tools.nsc.typechecker.Implicits$ImplicitSearch.searchImplicit(Implicits.scala:1319)
+	at scala.tools.nsc.typechecker.Implicits$ImplicitSearch.bestImplicit(Implicits.scala:1716)
+	at scala.tools.nsc.typechecker.Implicits.inferImplicit1(Implicits.scala:112)
+	at scala.tools.nsc.typechecker.Implicits.inferImplicit(Implicits.scala:91)
+	at scala.tools.nsc.typechecker.Implicits.inferImplicit$(Implicits.scala:88)
+	at scala.meta.internal.pc.MetalsGlobal$MetalsInteractiveAnalyzer.inferImplicit(MetalsGlobal.scala:78)
+	at scala.tools.nsc.typechecker.Implicits.inferImplicitView(Implicits.scala:50)
+	at scala.tools.nsc.typechecker.Implicits.inferImplicitView$(Implicits.scala:49)
+	at scala.meta.internal.pc.MetalsGlobal$MetalsInteractiveAnalyzer.inferImplicitView(MetalsGlobal.scala:78)
+	at scala.tools.nsc.typechecker.Typers$Typer.inferView(Typers.scala:332)
+	at scala.tools.nsc.typechecker.Typers$Typer.adaptToMember(Typers.scala:1416)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$adaptToMemberWithArgs$6(Typers.scala:1469)
+	at scala.tools.nsc.typechecker.Typers$Typer.silent(Typers.scala:727)
+	at scala.tools.nsc.typechecker.Typers$Typer.adaptToMemberWithArgs(Typers.scala:1469)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedSelect$1(Typers.scala:5454)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedSelectOrSuperCall$1(Typers.scala:5604)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:6206)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6261)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedArg(Typers.scala:3557)
+	at scala.tools.nsc.typechecker.PatternTypers$PatternTyper.typedArgWithFormal$1(PatternTypers.scala:136)
+	at scala.tools.nsc.typechecker.PatternTypers$PatternTyper.$anonfun$typedArgsForFormals$4(PatternTypers.scala:150)
+	at scala.tools.nsc.typechecker.PatternTypers$PatternTyper.typedArgsForFormals(PatternTypers.scala:150)
+	at scala.tools.nsc.typechecker.PatternTypers$PatternTyper.typedArgsForFormals$(PatternTypers.scala:131)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedArgsForFormals(Typers.scala:203)
+	at scala.tools.nsc.typechecker.Typers$Typer.handleMonomorphicCall$1(Typers.scala:3892)
+	at scala.tools.nsc.typechecker.Typers$Typer.doTypedApply(Typers.scala:3943)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typed1$28(Typers.scala:5166)
+	at scala.tools.nsc.typechecker.Typers$Typer.silent(Typers.scala:713)
+	at scala.tools.nsc.typechecker.Typers$Typer.tryTypedApply$1(Typers.scala:5166)
+	at scala.tools.nsc.typechecker.Typers$Typer.normalTypedApply$1(Typers.scala:5254)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedApply$1(Typers.scala:5267)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:6205)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6261)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedArg(Typers.scala:3557)
+	at scala.tools.nsc.typechecker.Typers$Typer.handlePolymorphicCall$1(Typers.scala:3961)
+	at scala.tools.nsc.typechecker.Typers$Typer.doTypedApply(Typers.scala:3980)
+	at scala.tools.nsc.typechecker.Typers$Typer.normalTypedApply$1(Typers.scala:5256)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedApply$1(Typers.scala:5267)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:6205)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6261)
+	at scala.tools.nsc.typechecker.Typers$Typer.computeType(Typers.scala:6350)
+	at scala.tools.nsc.typechecker.Namers$Namer.assignTypeToTree(Namers.scala:1105)
+	at scala.tools.nsc.typechecker.Namers$Namer.inferredValTpt$1(Namers.scala:1752)
+	at scala.tools.nsc.typechecker.Namers$Namer.valDefSig(Namers.scala:1765)
+	at scala.tools.nsc.typechecker.Namers$Namer.memberSig(Namers.scala:1953)
+	at scala.tools.nsc.typechecker.Namers$Namer.typeSig(Namers.scala:1903)
+	at scala.tools.nsc.typechecker.Namers$Namer$ValTypeCompleter.completeImpl(Namers.scala:918)
+	at scala.tools.nsc.typechecker.Namers$LockingTypeCompleter.complete(Namers.scala:2100)
+	at scala.tools.nsc.typechecker.Namers$LockingTypeCompleter.complete$(Namers.scala:2098)
+	at scala.tools.nsc.typechecker.Namers$TypeCompleterBase.complete(Namers.scala:2093)
+	at scala.reflect.internal.Symbols$Symbol.completeInfo(Symbols.scala:1566)
+	at scala.reflect.internal.Symbols$Symbol.info(Symbols.scala:1538)
+	at scala.reflect.internal.Symbols$Symbol.initialize(Symbols.scala:1733)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5835)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6261)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStat$1(Typers.scala:6339)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedStats$9(Typers.scala:3539)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3539)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedTemplate(Typers.scala:2144)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedClassDef(Typers.scala:1982)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:6168)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6261)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStat$1(Typers.scala:6339)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedStats$9(Typers.scala:3539)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3539)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedPackageDef$1(Typers.scala:5844)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:6171)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:6261)
+	at scala.tools.nsc.typechecker.Analyzer$typerFactory$TyperPhase.apply(Analyzer.scala:125)
+	at scala.tools.nsc.Global$GlobalPhase.applyPhase(Global.scala:481)
+	at scala.tools.nsc.interactive.Global$TyperRun.applyPhase(Global.scala:1369)
+	at scala.tools.nsc.interactive.Global$TyperRun.typeCheck(Global.scala:1362)
+	at scala.tools.nsc.interactive.Global.typeCheck(Global.scala:680)
+	at scala.meta.internal.pc.Compat.$anonfun$runOutline$1(Compat.scala:57)
+	at scala.collection.IterableOnceOps.foreach(IterableOnce.scala:619)
+	at scala.collection.IterableOnceOps.foreach$(IterableOnce.scala:617)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:935)
+	at scala.meta.internal.pc.Compat.runOutline(Compat.scala:49)
+	at scala.meta.internal.pc.Compat.runOutline(Compat.scala:35)
+	at scala.meta.internal.pc.Compat.runOutline$(Compat.scala:33)
+	at scala.meta.internal.pc.MetalsGlobal.runOutline(MetalsGlobal.scala:36)
+	at scala.meta.internal.pc.ScalaCompilerWrapper.compiler(ScalaCompilerAccess.scala:19)
+	at scala.meta.internal.pc.ScalaCompilerWrapper.compiler(ScalaCompilerAccess.scala:14)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$documentHighlight$1(ScalaPresentationCompiler.scala:432)
+
+9月 14, 2024 10:35:06 上午 scala.meta.internal.pc.CompilerAccess handleError
+严重: A severe compiler error occurred, full details of the error can be found in the error report /home/focused_xy/cs/ysyx/npc/.metals/.reports/metals-full/2024-09-14/r_compiler-error_(NPC)_10-35-06-620.md
+2024.09.14 10:35:38 INFO  compiling npc (1 scala source)
+2024.09.14 10:35:38 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:35:38 INFO  time: compiled NPC in 0.56s
+2024.09.14 10:36:44 INFO  compiling npc (1 scala source)
+2024.09.14 10:36:44 INFO  time: compiled NPC in 0.57s
+2024.09.14 10:37:55 INFO  compiling npc (1 scala source)
+2024.09.14 10:37:55 INFO  time: compiled NPC in 0.12s
+2024.09.14 10:37:56 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:38:00 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:38:03 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:38:03 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:38:05 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:38:05 INFO  compiling npc (1 scala source)
+2024.09.14 10:38:06 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:38:05 INFO  time: compiled NPC in 0.71s
+2024.09.14 10:38:09 INFO  compiling npc (1 scala source)
+2024.09.14 10:38:09 INFO  time: compiled NPC in 0.59s
+2024.09.14 10:40:07 INFO  compiling npc (1 scala source)
+2024.09.14 10:40:07 INFO  time: compiled NPC in 0.17s
+2024.09.14 10:40:08 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:40:11 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:40:12 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:40:12 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:40:14 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:40:18 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:40:18 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:40:18 INFO  compiling npc (1 scala source)
+2024.09.14 10:40:18 INFO  time: compiled NPC in 0.12s
+2024.09.14 10:40:19 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:40:21 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:40:22 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+9月 14, 2024 10:40:22 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 5922
+9月 14, 2024 10:40:22 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 5925
+2024.09.14 10:40:23 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/core/IFU.scala
+2024.09.14 10:40:27 INFO  compiling npc (1 scala source)
+2024.09.14 10:40:27 INFO  time: compiled NPC in 0.73s
+2024.09.14 10:40:52 INFO  compiling npc (1 scala source)
+2024.09.14 10:40:52 INFO  time: compiled NPC in 0.98s
+9月 14, 2024 10:41:08 上午 scala.meta.internal.pc.CompilerAccess handleError
+严重: A severe compiler error occurred, full details of the error can be found in the error report /home/focused_xy/cs/ysyx/npc/.metals/.reports/metals-full/2024-09-14/r_compiler-error_(NPC)_10-41-08-568.md
+2024.09.14 10:41:08 WARN  Could not find semantic tokens for: file:///home/focused_xy/cs/ysyx/npc/src/main/scala/npc/axi4/AXI4.scala
+9月 14, 2024 10:41:35 上午 scala.meta.internal.pc.CompilerAccess handleError
+严重: A severe compiler error occurred, full details of the error can be found in the error report /home/focused_xy/cs/ysyx/npc/.metals/.reports/metals-full/2024-09-14/r_compiler-error_(NPC)_10-41-35-479.md
+9月 14, 2024 10:41:37 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 6452
+2024.09.14 10:41:40 INFO  compiling npc (1 scala source)
+2024.09.14 10:41:40 INFO  time: compiled NPC in 0.17s
+2024.09.14 10:41:41 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/axi4/AXI4.scala
+9月 14, 2024 10:41:44 上午 scala.meta.internal.pc.MetalsGlobal inverseSemanticdbSymbols
+严重: invalid SemanticDB symbol: rvcpu/axi4/AXI4Xbar#waitPrevTrans.
+-1 is out of bounds (min 0, max 2)
+9月 14, 2024 10:41:44 上午 scala.meta.internal.pc.CompilerAccess handleError
+严重: A severe compiler error occurred, full details of the error can be found in the error report /home/focused_xy/cs/ysyx/npc/.metals/.reports/metals-full/2024-09-14/r_compiler-error_(NPC)_10-41-44-857.md
+2024.09.14 10:41:45 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/axi4/AXI4.scala
+2024.09.14 10:41:46 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/axi4/AXI4.scala
+2024.09.14 10:41:47 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/axi4/AXI4.scala
+2024.09.14 10:41:48 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/axi4/AXI4.scala
+2024.09.14 10:41:51 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/axi4/AXI4.scala
+2024.09.14 10:41:51 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/axi4/AXI4.scala
+2024.09.14 10:41:52 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/axi4/AXI4.scala
+2024.09.14 10:41:52 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/axi4/AXI4.scala
+2024.09.14 10:41:53 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/axi4/AXI4.scala
+2024.09.14 10:41:53 INFO  compiling npc (1 scala source)
+2024.09.14 10:41:54 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/axi4/AXI4.scala
+2024.09.14 10:41:53 INFO  time: compiled NPC in 0.81s
+9月 14, 2024 10:42:22 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 6871
+2024.09.14 10:42:51 INFO  compiling npc (1 scala source)
+2024.09.14 10:42:51 INFO  time: compiled NPC in 0.15s
+2024.09.14 10:42:54 INFO  compiling npc (1 scala source)
+2024.09.14 10:42:54 INFO  time: compiled NPC in 0.94s
+9月 14, 2024 10:43:16 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 7210
+9月 14, 2024 10:43:16 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 7224
+2024.09.14 10:43:17 INFO  compiling npc (1 scala source)
+2024.09.14 10:43:17 INFO  time: compiled NPC in 0.78s
+2024.09.14 10:44:54 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/axi4/AXI4.scala
+2024.09.14 10:45:01 INFO  compiling npc (1 scala source)
+2024.09.14 10:45:02 WARN  Could not load snapshot text for /home/focused_xy/cs/ysyx/npc/src/main/scala/npc/axi4/AXI4.scala
+2024.09.14 10:45:01 INFO  time: compiled NPC in 0.9s
+2024.09.14 10:49:22 WARN  Using indexes to guess the definition of SynchronizerShiftReg
+2024.09.14 10:49:23 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.14 10:49:23 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.14 10:49:23 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.14 10:49:23 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 10:49:23 INFO  time: compiled rocketchip.macros in 0.12s
+2024.09.14 10:49:23 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 10:49:23 INFO  time: compiled rocketchip.hardfloat in 0.18s
+2024.09.14 10:49:23 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 10:49:23 INFO  time: compiled rocketchip.cde in 0.23s
+2024.09.14 10:55:39 INFO  compiling rocketchip.cde (1 scala source)
+2024.09.14 10:55:39 INFO  compiling rocketchip.macros (1 scala source)
+2024.09.14 10:55:39 INFO  compiling rocketchip.hardfloat (20 scala sources)
+2024.09.14 10:55:39 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 10:55:39 INFO  time: compiled rocketchip.cde in 53ms
+2024.09.14 10:55:39 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 10:55:39 INFO  time: compiled rocketchip.hardfloat in 87ms
+2024.09.14 10:55:39 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.10. Compiling...
+2024.09.14 10:55:39 INFO  time: compiled rocketchip.macros in 0.13s
+9月 14, 2024 11:02:25 上午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+9月 14, 2024 11:02:25 上午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+9月 14, 2024 11:02:25 上午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+9月 14, 2024 11:02:25 上午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+9月 14, 2024 11:02:25 上午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+9月 14, 2024 11:02:25 上午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace

@@ -1,0 +1,12 @@
+{
+  "files.watcherExclude": {
+    "**/target": true
+  },
+  "lldb.showDisassembly": "auto",
+  "lldb.dereferencePointers": true,
+  "lldb.consoleMode": "commands",
+  "editor.tabSize": 2,
+  "editor.wordWrapColumn": 120,
+  "editor.formatOnSave": false,
+  "editor.formatOnType": false
+}
