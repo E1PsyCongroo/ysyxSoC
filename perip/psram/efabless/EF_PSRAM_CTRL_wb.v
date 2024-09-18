@@ -39,8 +39,9 @@ module EF_PSRAM_CTRL_wb (
     output  wire [3:0]      douten
 );
 
-    localparam  ST_IDLE = 1'b0,
-                ST_WAIT = 1'b1;
+    localparam  ST_IDLE = 2'b00,
+                ST_WAIT = 2'b01,
+                ST_RESET = 2'b11;
 
     wire        mr_sck;
     wire        mr_ce_n;
@@ -54,11 +55,19 @@ module EF_PSRAM_CTRL_wb (
     wire [3:0]  mw_dout;
     wire        mw_doe;
 
+    wire        mq_sck;
+    wire        mq_ce_n;
+    wire [3:0]  mq_din;
+    wire [3:0]  mq_dout;
+    wire        mq_doe;
+
     // PSRAM Reader and Writer wires
     wire        mr_rd;
     wire        mr_done;
     wire        mw_wr;
     wire        mw_done;
+    wire        mq_q;
+    wire        mq_done;
 
     //wire        doe;
 
@@ -69,10 +78,10 @@ module EF_PSRAM_CTRL_wb (
     //wire[3:0]   wb_byte_sel     =   sel_i & {4{wb_we}};
 
     // The FSM
-    reg         state, nstate;
+    reg[1:0]    state, nstate;
     always @ (posedge clk_i or posedge rst_i)
         if(rst_i)
-            state <= ST_IDLE;
+            state <= ST_RESET;
         else
             state <= nstate;
 
@@ -89,6 +98,13 @@ module EF_PSRAM_CTRL_wb (
                     nstate = ST_IDLE;
                 else
                     nstate = ST_WAIT;
+            ST_RESET :
+                if(mq_done)
+                    nstate = ST_IDLE;
+                else
+                    nstate = ST_RESET;
+            default :
+                nstate = ST_IDLE;
         endcase
     end
 
@@ -129,6 +145,7 @@ module EF_PSRAM_CTRL_wb (
 
     assign mr_rd    = ( (state==ST_IDLE ) & wb_re );
     assign mw_wr    = ( (state==ST_IDLE ) & wb_we );
+    assign mq_q     = (state == ST_RESET);
 
     PSRAM_READER MR (
         .clk(clk_i),
@@ -161,10 +178,22 @@ module EF_PSRAM_CTRL_wb (
         .douten(mw_doe)
     );
 
-    assign sck  = wb_we ? mw_sck  : mr_sck;
-    assign ce_n = wb_we ? mw_ce_n : mr_ce_n;
-    assign dout = wb_we ? mw_dout : mr_dout;
-    assign douten  = wb_we ? {4{mw_doe}}  : {4{mr_doe}};
+    PSRAM_QPI MQ (
+        .clk(clk_i),
+        .rst_n(~rst_i),
+        .q(mq_q),
+        .done(mq_done),
+        .sck(mq_sck),
+        .ce_n(mq_ce_n),
+        .din(mq_din),
+        .dout(mq_dout),
+        .douten(mq_doe)
+    );
+
+    assign sck  = (state == ST_RESET) ? mq_sck : (wb_we ? mw_sck  : mr_sck);
+    assign ce_n = (state == ST_RESET) ? mq_ce_n : (wb_we ? mw_ce_n : mr_ce_n);
+    assign dout = (state == ST_RESET) ? mq_dout : (wb_we ? mw_dout : mr_dout);
+    assign douten  = (state == ST_RESET) ? {4{mq_doe}} : (wb_we ? {4{mw_doe}}  : {4{mr_doe}});
 
     assign mw_din = din;
     assign mr_din = din;

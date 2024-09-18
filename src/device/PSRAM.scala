@@ -37,7 +37,7 @@ class psramHelper extends BlackBox with HasBlackBoxInline {
     val waddr = Input(UInt(32.W))
     val wdata = Input(UInt(32.W))
     val wlen  = Input(UInt(32.W))
-    val wen   = Input(Bool())
+    val iswrite   = Input(Bool())
   })
   setInline("psramHelper.v",
     """module psramHelper(
@@ -48,16 +48,44 @@ class psramHelper extends BlackBox with HasBlackBoxInline {
       |  input [31:0] waddr,
       |  input [31:0] wdata,
       |  input [31:0] wlen,
-      |  input wen
+      |  input iswrite
       |);
       |import "DPI-C" function void psram_read(input int raddr, output int rdata);
       |import "DPI-C" function void psram_write(input int waddr, input int wdata, input int wlen);
+      |reg [95:0] save;
       |always @(negedge clock) begin
       |  if (ren) psram_read(raddr, rdata);
       |  else rdata = 0;
+      |  save <= {waddr, wdata, wlen};
       |end
-      |always @(*) begin
-      |  if (wen) psram_write(waddr, wdata, wlen);
+      |always @(negedge iswrite) begin
+      |  psram_write(save[95:64], save[63:32], save[31:0]);
+      |end
+      |endmodule
+    """.stripMargin)
+}
+
+class qpiHelper extends BlackBox with HasBlackBoxInline {
+  val io = IO(new Bundle {
+    val enterQPI  = Input(Bool())
+    val quitQPI   = Input(Bool())
+    val modeOut   = Output(Bool())
+  })
+  setInline("qpiHelper.v",
+    """module qpiHelper(
+      |  input enterQPI,
+      |  input quitQPI,
+      |  output reg modeOut
+      |);
+      |initial begin
+      |   modeOut = 1'b0;
+      |end
+      |always_latch @(*) begin
+      |   if (enterQPI) begin
+      |     modeOut = 1'b1;
+      |   end else if (quitQPI) begin
+      |     modeOut = 1'b0;
+      |   end
       |end
       |endmodule
     """.stripMargin)
@@ -66,34 +94,28 @@ class psramHelper extends BlackBox with HasBlackBoxInline {
 class psramChisel extends RawModule {
   val io = IO(Flipped(new QSPIIO))
 withClockAndReset(io.sck.asClock, io.ce_n.asAsyncReset) {
-  val qpiMode = withReset(false.B)(RegInit(false.B))
   val sReadInst :: sReadAddr :: sWriteData :: sReadData :: sSendData :: Nil = Enum(5)
-  val state = RegInit(sReadInst)
 
+  val state = RegInit(sReadInst)
   val isReadInst  = state === sReadInst
   val isReadAddr  = state === sReadAddr
   val isWriteData = state === sWriteData
   val isReadData  = state === sReadData
   val isSendData  = state === sSendData
 
-  val count   = RegInit(0.U(4.W))
-  val readInstEnd   = count === 7.U
-  val readAddrEnd   = count === 5.U
-  val writeDataEnd  = count === 8.U
-  val readDataEnd   = count === 6.U
-  val sendDataEnd   = count === 7.U
-  count       := MuxCase(count + 1.U, Seq(
-    (isReadInst && readInstEnd) -> 0.U,
-    (isReadAddr && readAddrEnd) -> 0.U,
-    (isWriteData && writeDataEnd) -> 0.U,
-    (isReadData && readDataEnd) -> 0.U,
-    (isSendData && sendDataEnd) -> 0.U,
-  ))
-
+  val qpi = Module(new qpiHelper)
+  val qpiMode = qpi.io.modeOut
+  val count   = RegInit(0.U(3.W))
+  val readInstEnd   = isReadInst && Mux(qpiMode, count === 1.U, count === 7.U)
+  val readAddrEnd   = isReadAddr && count === 5.U
+  val writeDataEnd  = isWriteData && count === 7.U
+  val readDataEnd   = isReadData && count === 6.U
+  val sendDataEnd   = isSendData && count === 7.U
   val inst    = RegInit(0.U(8.W))
   val isRead  = inst === "hEB".U
   val isWrite = inst === "h38".U
   val isQPI   = inst === "h35".U
+  val isQQPI  = inst === "hF5".U
   val addr    = RegInit(0.U(24.W))
   val data    = RegInit(0.U(32.W))
   val wlen    = RegInit(0.U(3.W))
@@ -102,7 +124,7 @@ withClockAndReset(io.sck.asClock, io.ce_n.asAsyncReset) {
   val psram   = Module(new psramHelper)
 
   state := MuxLookup(state, sReadAddr)(Seq(
-    sReadInst   -> Mux(readInstEnd, sReadAddr, sReadInst),
+    sReadInst   -> Mux((readInstEnd && !(isQPI || isQQPI)), sReadAddr, sReadInst),
     sReadAddr   -> MuxCase(sReadAddr, Seq(
       (isWrite && readAddrEnd)  -> sWriteData,
       (isRead && readAddrEnd)   -> sReadData,
@@ -112,15 +134,19 @@ withClockAndReset(io.sck.asClock, io.ce_n.asAsyncReset) {
     sSendData   -> Mux(sendDataEnd, sReadInst, sSendData),
   ))
 
-  psram.io.clock  := io.sck.asClock
-  psram.io.raddr  := addr
-  psram.io.ren    := isReadData && readDataEnd
-  psram.io.waddr  := addr
-  psram.io.wdata  := data >> ((4.U - wlen) << 3)
-  psram.io.wlen   := wlen
-  psram.io.wen    := isWriteData && (writeDataEnd || io.ce_n)
+  psram.io.clock    := io.sck.asClock
+  psram.io.raddr    := addr
+  psram.io.ren      := isReadData && readDataEnd
+  psram.io.waddr    := addr
+  psram.io.wdata    := data >> ((4.U - wlen) << 3)
+  psram.io.wlen     := wlen
+  psram.io.iswrite  := isWrite
 
-  inst  := Mux(isReadInst, inst(6, 0) ## di(0), inst)
+  count       := Mux(readInstEnd || readAddrEnd || writeDataEnd || readDataEnd || sendDataEnd, 0.U, count + 1.U)
+
+  qpi.io.enterQPI := isQPI
+  qpi.io.quitQPI  := isQQPI
+  inst  := Mux(isReadInst, Mux(qpiMode, inst(3, 0) ## di, inst(6, 0) ## di(0)), inst)
   addr  := Mux(isReadAddr, addr(19, 0) ## di, addr)
   data  := MuxCase(data, Seq(
     (isWriteData && !count(0))  -> di ## data(31, 4),
