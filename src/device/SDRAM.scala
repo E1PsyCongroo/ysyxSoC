@@ -19,8 +19,8 @@ class SDRAMIO extends Bundle {
   val we  = Output(Bool())
   val a   = Output(UInt(13.W))
   val ba  = Output(UInt(2.W))
-  val dqm = Output(UInt(2.W))
-  val dq  = Analog(16.W)
+  val dqm = Output(UInt(4.W))
+  val dq  = Analog(32.W)
 }
 
 class sdram_top_axi extends BlackBox {
@@ -89,24 +89,6 @@ withClockAndReset(clk.asClock, io.cs) {
   val cmdBT = cmd === BitPat("b110")
   val cmdM  = cmd === BitPat("b000")
 
-  val mode        = RegInit(0.U(13.W))
-  val burstLength = mode(2, 0)
-  val casLatency  = mode(6, 4)
-  val bankAddr    = RegInit(0.U(2.W))
-  val rowAddr     = RegInit(0.U(13.W))
-  val colAddr     = RegInit(0.U(9.W))
-  val dqmReg      = RegInit(0.U(2.W))
-  val casReg      = RegInit(0.U(3.W))
-  val burstCount  = RegInit(0.U(3.W))
-  val sdram       = Module(new sdramHelper)
-  val outEn       = RegNext(sdram.io.ren)
-  val di          = RegNext(TriStateInBuf(io.dq, RegNext(sdram.io.rdata), outEn))
-
-  val casAfter    = casReg(casLatency - 2.U)  // -2.U instead of -1.U to fit control bug
-  val burstEnd    = burstCount === (1.U >> burstLength) - 1.U
-  val burstTerm   = cmdBT
-  val addr        = bankAddr ## rowAddr ## colAddr
-
   val sIdle :: sWaitCAS :: sReadBurst :: sWriteBurst :: Nil = Enum(4)
 
   val state         = RegInit(sIdle)
@@ -114,6 +96,24 @@ withClockAndReset(clk.asClock, io.cs) {
   val isWaitCAS     = state === sWaitCAS
   val isReadBurst   = state === sReadBurst
   val isWriteBurst  = state === sWriteBurst
+  val mode        = RegInit(0.U(13.W))
+  val burstLength = mode(2, 0)
+  val casLatency  = mode(6, 4)
+  val bankAddr    = RegInit(0.U(2.W))
+  val rowAddr     = RegInit(0.U(13.W))
+  val colAddr     = RegInit(0.U(10.W))
+  val dqmReg      = RegInit(0.U(4.W))
+  val casReg      = RegInit(0.U(3.W))
+  val burstCount  = RegInit(0.U(3.W))
+  val sdram0      = Module(new sdramHelper)
+  val sdram1      = Module(new sdramHelper)
+  val outEn       = RegNext(sdram0.io.ren)
+  val di          = RegNext(TriStateInBuf(io.dq, RegNext(sdram1.io.rdata ## sdram0.io.rdata), outEn))
+
+  val casAfter    = casReg(casLatency - 1.U)
+  val burstEnd    = burstCount === (1.U >> burstLength) - 1.U
+  val burstTerm   = cmdBT
+  val addr        = bankAddr ## rowAddr ## colAddr
 
   state := MuxLookup(state, sIdle)(Seq(
     sIdle   -> MuxCase(sIdle, Seq(
@@ -132,17 +132,24 @@ withClockAndReset(clk.asClock, io.cs) {
   dqmReg          := Mux((cmdR || cmdW) || isWriteBurst, io.dqm, dqmReg)
   casReg          := casReg(1, 0) ## cmdR
   burstCount      := MuxCase(0.U, Seq(
-    casAfter                      -> 1.U,
+    casAfter                      -> 0.U,
     cmdW                          -> 0.U,
     (isReadBurst || isWriteBurst) -> (burstCount + 1.U),
   ))
-  sdram.io.clock  := clk.asClock
-  sdram.io.raddr  := addr(23, 3) ## (addr(2, 0) + burstCount)
-  sdram.io.ren    := casAfter || isReadBurst
-  sdram.io.waddr  := addr(23, 3) ## (addr(2, 0) + burstCount)
-  sdram.io.wdata  := di
-  sdram.io.dqm    := dqmReg
-  sdram.io.wen    := isWriteBurst
+  sdram0.io.clock  := clk.asClock
+  sdram1.io.clock  := clk.asClock
+  sdram0.io.raddr  := addr(24, 4) ## (addr(3, 0) + (burstCount << 1.U))
+  sdram1.io.raddr  := addr(24, 4) ## (addr(3, 0) + (burstCount << 1.U) + 1.U)
+  sdram0.io.ren    := casAfter || (isReadBurst && !burstEnd && !burstTerm)
+  sdram1.io.ren    := casAfter || (isReadBurst && !burstEnd && !burstTerm)
+  sdram0.io.waddr  := addr(24, 4) ## (addr(3, 0) + (burstCount << 1.U))
+  sdram1.io.waddr  := addr(24, 4) ## (addr(3, 0) + (burstCount << 1.U) + 1.U)
+  sdram0.io.wdata  := di(15, 0)
+  sdram1.io.wdata  := di(31, 16)
+  sdram0.io.dqm    := dqmReg(1, 0)
+  sdram1.io.dqm    := dqmReg(3, 2)
+  sdram0.io.wen    := isWriteBurst && !burstTerm
+  sdram1.io.wen    := isWriteBurst && !burstTerm
 
   assert(!(!isIdle && (cmdM || cmdA)))
 }
