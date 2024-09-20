@@ -70,9 +70,9 @@ class sdramHelper extends BlackBox with HasBlackBoxInline {
       |import "DPI-C" function void sdram_read(input int raddr, output shortint rdata);
       |import "DPI-C" function void sdram_write(input int waddr, input shortint wdata, input byte dqm);
       |always @(negedge clock) begin
-      |  if (ren) sdram_read(raddr, rdata);
+      |  if (ren) sdram_read({raddr[30:0], 1'b0}, rdata);
       |  else rdata = 0;
-      |  if (wen) sdram_write(waddr, wdata, {6'b0, dqm});
+      |  if (wen) sdram_write({waddr[30:0], 1'b0}, wdata, {6'b0, dqm});
       |end
       |endmodule
     """.stripMargin)
@@ -113,7 +113,7 @@ withClockAndReset(clk.asClock, io.cs) {
   val casAfter    = casReg(casLatency - 1.U)
   val burstEnd    = burstCount === (1.U >> burstLength) - 1.U
   val burstTerm   = cmdBT
-  val addr        = bankAddr ## rowAddr ## colAddr
+  val addr        = rowAddr ## bankAddr  ## colAddr
 
   state := MuxLookup(state, sIdle)(Seq(
     sIdle   -> MuxCase(sIdle, Seq(
@@ -128,7 +128,7 @@ withClockAndReset(clk.asClock, io.cs) {
   mode            := Mux(cmdM, io.a, mode)
   bankAddr        := Mux(cmdA, io.ba, bankAddr)
   rowAddr         := Mux(cmdA, io.a, rowAddr)
-  colAddr         := Mux(cmdR || cmdW, io.a(8, 0), colAddr)
+  colAddr         := Mux(cmdR || cmdW, io.a(9, 0), colAddr)
   dqmReg          := Mux((cmdR || cmdW) || isWriteBurst, io.dqm, dqmReg)
   casReg          := casReg(1, 0) ## cmdR
   burstCount      := MuxCase(0.U, Seq(
