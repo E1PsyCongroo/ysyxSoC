@@ -17,7 +17,7 @@ class SDRAMIO extends Bundle {
   val ras = Output(Bool())
   val cas = Output(Bool())
   val we  = Output(Bool())
-  val a   = Output(UInt(13.W))
+  val a   = Output(UInt(14.W))
   val ba  = Output(UInt(2.W))
   val dqm = Output(UInt(4.W))
   val dq  = Analog(32.W)
@@ -100,7 +100,7 @@ withClockAndReset(clk.asClock, io.cs) {
   val burstLength = mode(2, 0)
   val casLatency  = mode(6, 4)
   val bankAddr    = RegInit(0.U(2.W))
-  val rowAddr     = RegInit(0.U(13.W))
+  val rowAddr     = RegInit(0.U(14.W))
   val colAddr     = RegInit(0.U(10.W))
   val dqmReg      = RegInit(0.U(4.W))
   val casReg      = RegInit(0.U(3.W))
@@ -125,7 +125,7 @@ withClockAndReset(clk.asClock, io.cs) {
     sWriteBurst -> Mux(burstEnd || burstTerm, sIdle, sWriteBurst),
   ))
 
-  mode            := Mux(cmdM, io.a, mode)
+  mode            := Mux(cmdM, io.a(12, 0), mode)
   bankAddr        := Mux(cmdA, io.ba, bankAddr)
   rowAddr         := Mux(cmdA, io.a, rowAddr)
   colAddr         := Mux(cmdR || cmdW, io.a(9, 0), colAddr)
@@ -138,12 +138,12 @@ withClockAndReset(clk.asClock, io.cs) {
   ))
   sdram0.io.clock  := clk.asClock
   sdram1.io.clock  := clk.asClock
-  sdram0.io.raddr  := addr(24, 4) ## (addr(3, 0) + (burstCount << 1.U))
-  sdram1.io.raddr  := addr(24, 4) ## (addr(3, 0) + (burstCount << 1.U) + 1.U)
+  sdram0.io.raddr  := addr(25, 4) ## (addr(3, 0) + (burstCount << 1.U))
+  sdram1.io.raddr  := addr(25, 4) ## (addr(3, 0) + (burstCount << 1.U) + 1.U)
   sdram0.io.ren    := casAfter || (isReadBurst && !burstEnd && !burstTerm)
   sdram1.io.ren    := casAfter || (isReadBurst && !burstEnd && !burstTerm)
-  sdram0.io.waddr  := addr(24, 4) ## (addr(3, 0) + (burstCount << 1.U))
-  sdram1.io.waddr  := addr(24, 4) ## (addr(3, 0) + (burstCount << 1.U) + 1.U)
+  sdram0.io.waddr  := addr(25, 4) ## (addr(3, 0) + (burstCount << 1.U))
+  sdram1.io.waddr  := addr(25, 4) ## (addr(3, 0) + (burstCount << 1.U) + 1.U)
   sdram0.io.wdata  := di(15, 0)
   sdram1.io.wdata  := di(31, 16)
   sdram0.io.dqm    := dqmReg(1, 0)
