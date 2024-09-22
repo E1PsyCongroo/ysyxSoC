@@ -100,7 +100,7 @@ withClockAndReset(clk.asClock, io.cs) {
   val burstLength = mode(2, 0)
   val casLatency  = mode(6, 4)
   val bankAddr    = RegInit(0.U(2.W))
-  val rowAddr     = RegInit(0.U(14.W))
+  val rowAddr     = RegInit(VecInit(Seq.fill(4)(0.U(14.W))))
   val colAddr     = RegInit(0.U(10.W))
   val dqmReg      = RegInit(0.U(4.W))
   val casReg      = RegInit(0.U(3.W))
@@ -113,7 +113,6 @@ withClockAndReset(clk.asClock, io.cs) {
   val casAfter    = casReg(casLatency - 1.U)
   val burstEnd    = burstCount === (1.U >> burstLength) - 1.U
   val burstTerm   = cmdBT
-  val addr        = rowAddr ## bankAddr  ## colAddr
 
   state := MuxLookup(state, sIdle)(Seq(
     sIdle   -> MuxCase(sIdle, Seq(
@@ -126,8 +125,10 @@ withClockAndReset(clk.asClock, io.cs) {
   ))
 
   mode            := Mux(cmdM, io.a(12, 0), mode)
-  bankAddr        := Mux(cmdA, io.ba, bankAddr)
-  rowAddr         := Mux(cmdA, io.a, rowAddr)
+  bankAddr        := Mux(cmdA || cmdR || cmdW, io.ba, bankAddr)
+  for (i <- 0 until 4) {
+    rowAddr(i)    := Mux(cmdA && (io.ba === i.U), io.a, rowAddr(i))
+  }
   colAddr         := Mux(cmdR || cmdW, io.a(9, 0), colAddr)
   dqmReg          := Mux((cmdR || cmdW) || isWriteBurst, io.dqm, dqmReg)
   casReg          := casReg(1, 0) ## cmdR
@@ -135,6 +136,12 @@ withClockAndReset(clk.asClock, io.cs) {
     casAfter                      -> 0.U,
     cmdW                          -> 0.U,
     (isReadBurst || isWriteBurst) -> (burstCount + 1.U),
+  ))
+
+  val addr        = MuxLookup(bankAddr, (rowAddr(0) ## bankAddr  ## colAddr))(Seq(
+    1.U -> (rowAddr(1) ## bankAddr  ## colAddr),
+    2.U -> (rowAddr(2) ## bankAddr  ## colAddr),
+    3.U -> (rowAddr(3) ## bankAddr  ## colAddr),
   ))
   sdram0.io.clock  := clk.asClock
   sdram1.io.clock  := clk.asClock
