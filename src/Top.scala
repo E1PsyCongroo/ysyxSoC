@@ -21,6 +21,16 @@ class ysyxSoCTop extends Module {
 }
 
 object Elaborate extends App {
-  val firtoolOptions = Array("--disable-annotation-unknown")
+  val firtoolOptions = Array(
+    "--lowering-options=" + List(
+      // make yosys happy
+      // see https://github.com/llvm/circt/blob/main/docs/VerilogGeneration.md
+      "disallowLocalVariables",
+      "disallowPackedArrays",
+      "locationInfoStyle=wrapInAtSquareBracket"
+    ).mkString(","),
+    "--disable-annotation-unknown"
+  )
+  // val firtoolOptions = Array("--disable-annotation-unknown")
   circt.stage.ChiselStage.emitSystemVerilogFile(new ysyxSoCTop, args, firtoolOptions)
 }
