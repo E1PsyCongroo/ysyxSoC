@@ -76,7 +76,7 @@ module sdram_axi
     ,output [  3:0]  sdram_dqm_o
     ,output [ 13:0]  sdram_addr_o
     ,output [  1:0]  sdram_ba_o
-    ,output [ 32:0]  sdram_data_output_o
+    ,output [ 31:0]  sdram_data_output_o
     ,output          sdram_data_out_en_o
 );
 

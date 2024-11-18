@@ -27,7 +27,7 @@ class sdram_top_axi extends BlackBox {
   val io = IO(new Bundle {
     val clock = Input(Clock())
     val reset = Input(Bool())
-    val in = Flipped(new AXI4Bundle(AXI4BundleParameters(addrBits = 32, dataBits = 32, idBits = 4)))
+    val in    = Flipped(new AXI4Bundle(AXI4BundleParameters(addrBits = 32, dataBits = 32, idBits = 4)))
     val sdram = new SDRAMIO
   })
 }
@@ -36,7 +36,7 @@ class sdram_top_apb extends BlackBox {
   val io = IO(new Bundle {
     val clock = Input(Clock())
     val reset = Input(Bool())
-    val in = Flipped(new APBBundle(APBBundleParameters(addrBits = 32, dataBits = 32)))
+    val in    = Flipped(new APBBundle(APBBundleParameters(addrBits = 32, dataBits = 32)))
     val sdram = new SDRAMIO
   })
 }
@@ -56,7 +56,8 @@ class sdramHelper extends BlackBox with HasBlackBoxInline {
     val dqm   = Input(UInt(2.W))
     val wen   = Input(Bool())
   })
-  setInline("sdramHelper.v",
+  setInline(
+    "sdramHelper.v",
     """module sdramHelper(
       |  input clock,
       |  input [31:0] raddr,
@@ -75,108 +76,129 @@ class sdramHelper extends BlackBox with HasBlackBoxInline {
       |  if (wen) sdram_write({waddr[30:0], 1'b0}, wdata, {6'b0, dqm});
       |end
       |endmodule
-    """.stripMargin)
+    """.stripMargin
+  )
 }
 
 class sdramChisel extends RawModule {
-  val io = IO(Flipped(new SDRAMIO))
+  val io  = IO(Flipped(new SDRAMIO))
   val clk = io.cke & io.clk
-withClockAndReset(clk.asClock, io.cs) {
-  val cmd   = io.ras ## io.cas ## io.we
-  val cmdA  = cmd === BitPat("b011")
-  val cmdR  = cmd === BitPat("b101")
-  val cmdW  = cmd === BitPat("b100")
-  val cmdBT = cmd === BitPat("b110")
-  val cmdM  = cmd === BitPat("b000")
+  withClockAndReset(clk.asClock, io.cs) {
+    val cmd   = io.ras ## io.cas ## io.we
+    val cmdA  = cmd === BitPat("b011")
+    val cmdR  = cmd === BitPat("b101")
+    val cmdW  = cmd === BitPat("b100")
+    val cmdBT = cmd === BitPat("b110")
+    val cmdM  = cmd === BitPat("b000")
 
-  val sIdle :: sWaitCAS :: sReadBurst :: sWriteBurst :: Nil = Enum(4)
+    val sIdle :: sReadBurst :: sWriteBurst :: Nil = Enum(3)
 
-  val state         = RegInit(sIdle)
-  val isIdle        = state === sIdle
-  val isWaitCAS     = state === sWaitCAS
-  val isReadBurst   = state === sReadBurst
-  val isWriteBurst  = state === sWriteBurst
-  val mode        = RegInit(0.U(13.W))
-  val burstLength = mode(2, 0)
-  val casLatency  = mode(6, 4)
-  val bankAddr    = RegInit(0.U(2.W))
-  val rowAddr     = RegInit(VecInit(Seq.fill(4)(0.U(14.W))))
-  val colAddr     = RegInit(0.U(10.W))
-  val dqmReg      = RegInit(0.U(4.W))
-  val casReg      = RegInit(0.U(3.W))
-  val burstCount  = RegInit(0.U(3.W))
-  val sdram0      = Module(new sdramHelper)
-  val sdram1      = Module(new sdramHelper)
-  val outEn       = RegNext(sdram0.io.ren)
-  val di          = RegNext(TriStateInBuf(io.dq, RegNext(sdram1.io.rdata ## sdram0.io.rdata), outEn))
+    val state        = RegInit(sIdle)
+    val isIdle       = state === sIdle
+    val isReadBurst  = state === sReadBurst
+    val isWriteBurst = state === sWriteBurst
 
-  val casAfter    = casReg(casLatency - 1.U)
-  val burstEnd    = burstCount === (1.U >> burstLength) - 1.U
-  val burstTerm   = cmdBT
+    val mode        = RegInit(0.U(13.W))
+    val burstLength = mode(2, 0)
+    val casLatency  = mode(6, 4)
+    val bankAddr    = RegInit(0.U(2.W))
+    val rowAddr     = RegInit(VecInit(Seq.fill(4)(0.U(14.W))))
+    val colAddr     = RegInit(0.U(10.W))
+    val dqmReg      = RegInit(0.U(4.W))
+    val casReg      = RegInit(0.U(3.W))
+    val burstCount  = RegInit(0.U(3.W))
+    val sdram0      = Module(new sdramHelper)
+    val sdram1      = Module(new sdramHelper)
+    val outEn_q     = Reg(Vec(4, Bool()))
+    val rdata_q     = Reg(Vec(3, UInt(32.W)))
+    val di          = RegNext(TriStateInBuf(io.dq, rdata_q(casLatency - 1.U), outEn_q(casLatency - 1.U)))
+    val burstEnd = burstCount === (1.U >> burstLength) - 1.U
 
-  state := MuxLookup(state, sIdle)(Seq(
-    sIdle   -> MuxCase(sIdle, Seq(
-      cmdR  -> sWaitCAS,
-      cmdW  -> sWriteBurst,
-    )),
-    sWaitCAS    -> Mux(casAfter, sReadBurst, sWaitCAS),
-    sReadBurst  -> Mux(burstEnd || burstTerm, sIdle, sReadBurst),
-    sWriteBurst -> Mux(burstEnd || burstTerm, sIdle, sWriteBurst),
-  ))
+    state := MuxLookup(state, sIdle)(
+      Seq(
+        sIdle -> MuxCase(
+          sIdle,
+          Seq(
+            cmdR -> sReadBurst,
+            cmdW -> sWriteBurst
+          )
+        ),
+        sReadBurst -> Mux(burstEnd && !cmdR, sIdle, sReadBurst),
+        sWriteBurst -> Mux(burstEnd && !cmdW, sIdle, sWriteBurst)
+      )
+    )
 
-  mode            := Mux(cmdM, io.a(12, 0), mode)
-  bankAddr        := Mux(cmdA || cmdR || cmdW, io.ba, bankAddr)
-  for (i <- 0 until 4) {
-    rowAddr(i)    := Mux(cmdA && (io.ba === i.U), io.a, rowAddr(i))
+    mode     := Mux(cmdM, io.a(12, 0), mode)
+    bankAddr := Mux(cmdA || cmdR || cmdW, io.ba, bankAddr)
+    for (i <- 0 until 4) {
+      rowAddr(i) := Mux(cmdA && (io.ba === i.U), io.a, rowAddr(i))
+    }
+    colAddr := Mux(cmdR || cmdW, io.a(9, 0), colAddr)
+    dqmReg  := Mux((cmdR || cmdW) || isWriteBurst, io.dqm, dqmReg)
+    burstCount := MuxCase(
+      0.U,
+      Seq(
+        (cmdR || cmdW) -> 0.U,
+        (isReadBurst || isWriteBurst) -> (burstCount + 1.U),
+      )
+    )
+
+    val addr = MuxLookup(bankAddr, (rowAddr(0) ## bankAddr ## colAddr))(
+      Seq(
+        1.U -> (rowAddr(1) ## bankAddr ## colAddr),
+        2.U -> (rowAddr(2) ## bankAddr ## colAddr),
+        3.U -> (rowAddr(3) ## bankAddr ## colAddr)
+      )
+    )
+    sdram0.io.clock := clk.asClock
+    sdram1.io.clock := clk.asClock
+    sdram0.io.raddr := addr(25, 4) ## (addr(3, 0) + (burstCount << 1.U))
+    sdram1.io.raddr := addr(25, 4) ## (addr(3, 0) + (burstCount << 1.U) + 1.U)
+    sdram0.io.ren   := RegNext(cmdR)
+    sdram1.io.ren   := RegNext(cmdR)
+    sdram0.io.waddr := addr(25, 4) ## (addr(3, 0) + (burstCount << 1.U))
+    sdram1.io.waddr := addr(25, 4) ## (addr(3, 0) + (burstCount << 1.U) + 1.U)
+    sdram0.io.wdata := di(15, 0)
+    sdram1.io.wdata := di(31, 16)
+    sdram0.io.dqm   := dqmReg(1, 0)
+    sdram1.io.dqm   := dqmReg(3, 2)
+    sdram0.io.wen   := isWriteBurst
+    sdram1.io.wen   := isWriteBurst
+
+    outEn_q(2) := outEn_q(1)
+    outEn_q(1) := outEn_q(0)
+    outEn_q(0) := RegNext(cmdR)
+
+    rdata_q(2) := rdata_q(1)
+    rdata_q(1) := rdata_q(0)
+    rdata_q(0) := sdram1.io.rdata ## sdram0.io.rdata
+
+    assert(!(!isIdle && (cmdM || cmdA)))
   }
-  colAddr         := Mux(cmdR || cmdW, io.a(9, 0), colAddr)
-  dqmReg          := Mux((cmdR || cmdW) || isWriteBurst, io.dqm, dqmReg)
-  casReg          := casReg(1, 0) ## cmdR
-  burstCount      := MuxCase(0.U, Seq(
-    casAfter                      -> 0.U,
-    cmdW                          -> 0.U,
-    (isReadBurst || isWriteBurst) -> (burstCount + 1.U),
-  ))
-
-  val addr        = MuxLookup(bankAddr, (rowAddr(0) ## bankAddr  ## colAddr))(Seq(
-    1.U -> (rowAddr(1) ## bankAddr  ## colAddr),
-    2.U -> (rowAddr(2) ## bankAddr  ## colAddr),
-    3.U -> (rowAddr(3) ## bankAddr  ## colAddr),
-  ))
-  sdram0.io.clock  := clk.asClock
-  sdram1.io.clock  := clk.asClock
-  sdram0.io.raddr  := addr(25, 4) ## (addr(3, 0) + (burstCount << 1.U))
-  sdram1.io.raddr  := addr(25, 4) ## (addr(3, 0) + (burstCount << 1.U) + 1.U)
-  sdram0.io.ren    := casAfter || (isReadBurst && !burstEnd && !burstTerm)
-  sdram1.io.ren    := casAfter || (isReadBurst && !burstEnd && !burstTerm)
-  sdram0.io.waddr  := addr(25, 4) ## (addr(3, 0) + (burstCount << 1.U))
-  sdram1.io.waddr  := addr(25, 4) ## (addr(3, 0) + (burstCount << 1.U) + 1.U)
-  sdram0.io.wdata  := di(15, 0)
-  sdram1.io.wdata  := di(31, 16)
-  sdram0.io.dqm    := dqmReg(1, 0)
-  sdram1.io.dqm    := dqmReg(3, 2)
-  sdram0.io.wen    := isWriteBurst && !burstTerm
-  sdram1.io.wen    := isWriteBurst && !burstTerm
-
-  assert(!(!isIdle && (cmdM || cmdA)))
-}
 }
 
 class AXI4SDRAM(address: Seq[AddressSet])(implicit p: Parameters) extends LazyModule {
   val beatBytes = 4
-  val node = AXI4SlaveNode(Seq(AXI4SlavePortParameters(
-    Seq(AXI4SlaveParameters(
-        address       = address,
-        executable    = true,
-        supportsWrite = TransferSizes(1, beatBytes),
-        supportsRead  = TransferSizes(1, beatBytes),
-        interleavedId = Some(0))
-    ),
-    beatBytes  = beatBytes)))
+  val node = AXI4SlaveNode(
+    Seq(
+      AXI4SlavePortParameters(
+        Seq(
+          AXI4SlaveParameters(
+            address       = address,
+            executable    = true,
+            supportsWrite = TransferSizes(1, beatBytes),
+            supportsRead  = TransferSizes(1, beatBytes),
+            interleavedId = Some(0)
+          )
+        ),
+        beatBytes = beatBytes
+      )
+    )
+  )
 
   lazy val module = new Impl
   class Impl extends LazyModuleImp(this) {
-    val (in, _) = node.in(0)
+    val (in, _)      = node.in(0)
     val sdram_bundle = IO(new SDRAMIO)
 
     val msdram = Module(new sdram_top_axi)
@@ -188,17 +210,18 @@ class AXI4SDRAM(address: Seq[AddressSet])(implicit p: Parameters) extends LazyMo
 }
 
 class APBSDRAM(address: Seq[AddressSet])(implicit p: Parameters) extends LazyModule {
-  val node = APBSlaveNode(Seq(APBSlavePortParameters(
-    Seq(APBSlaveParameters(
-      address       = address,
-      executable    = true,
-      supportsRead  = true,
-      supportsWrite = true)),
-    beatBytes  = 4)))
+  val node = APBSlaveNode(
+    Seq(
+      APBSlavePortParameters(
+        Seq(APBSlaveParameters(address = address, executable = true, supportsRead = true, supportsWrite = true)),
+        beatBytes = 4
+      )
+    )
+  )
 
   lazy val module = new Impl
   class Impl extends LazyModuleImp(this) {
-    val (in, _) = node.in(0)
+    val (in, _)      = node.in(0)
     val sdram_bundle = IO(new SDRAMIO)
 
     val msdram = Module(new sdram_top_apb)
