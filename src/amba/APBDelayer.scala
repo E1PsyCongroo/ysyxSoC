@@ -25,7 +25,7 @@ class APBDelayerChisel extends Module {
 
   val s:      Int = 32
   val sWidth: Int = log2Ceil(s)
-  val r:      Int = (4.7 * s).round.toInt
+  val r:      Int = (5.0 * s).round.toInt
 
   val sIdle :: sWait :: Nil = Enum(2)
 
