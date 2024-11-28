@@ -25,7 +25,7 @@ class AXI4DelayerChisel extends Module {
 
   val s:      Int = 32
   val sWidth: Int = log2Ceil(s)
-  val r:      Int = (5.2 * s).round.toInt
+  val r:      Int = (5.8 * s).round.toInt
 
   val sWriteIdle :: sWriteStart :: sWriteWait :: Nil = Enum(3)
 
